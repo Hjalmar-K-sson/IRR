@@ -1,0 +1,19 @@
+{
+  "name": "irr",
+  "version": "1.0.0",
+  "description": "Generic restaurant review CRUD web app",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hjalmar-K-sson/IRR.git"
+  },
+  "author": "Hjalmar-K-sson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hjalmar-K-sson/IRR/issues"
+  },
+  "homepage": "https://github.com/Hjalmar-K-sson/IRR#readme"
+}
