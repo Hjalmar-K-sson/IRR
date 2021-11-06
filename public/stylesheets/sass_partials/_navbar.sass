@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@200;400;600&family=Noto+Serif+Display:wght@700&display=swap')
+
+//Fonts:    
+$logo-font: 'Noto Serif Display', serif
+$regular-font: 'Noto Sans Display', sans-serif
+//Font weights
+$bold: 700
+$semi-bold: 600
+$regular: 400
+$extra-light: 200
+//Colors
+$black: #000
+.navbar
+    height: 64px
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+
+.nav__container
+    display: flex
+    justify-content: space-around
+    align-items: center
+    height: 100%
+
+.nav__menu
+    position: fixed
+    top: 64px
+    bottom: 0
+    opacity: 0
+    visibility: hidden
+    left: 0
+    right: 0
+
+.nav__home-link,
+.nav__links-item-link
+    text-decoration: none
+    display: flex
+    align-items: center
+    margin: 0 0.4rem
+    color: $black
+
+.nav__home-link
+    font-family: $logo-font
+
+.nav__links-item-link
+    font-family: $regular-font
+
+.nav__toggle-btn
+    border: none
+
+.nav__icon-bar
+    display: block
+    width: 2.5rem
+    height: .3rem
+    background-color: $black
+    margin: .4rem
+    border-radius: 0.1rem
