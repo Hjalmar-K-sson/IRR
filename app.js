@@ -2,6 +2,17 @@
 const express = require("express");
 const path = require("path");
 const ejs = require("ejs");
+const mongoose = require("mongoose");
+
+//Connecting app to MongoDB:
+const dbUrl = "mongodb://localhost:27017/IRR";
+mongoose.connect(dbUrl, {
+  useNewUrlParser: true,
+});
+
+const db = mongoose.connection;
+db.on("error", console.error.bind("DB Connection error..."));
+db.once("open", () => console.log("Database connected..."));
 
 //Starting the express app:
 const app = express();

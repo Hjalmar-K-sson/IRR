@@ -7,7 +7,10 @@
     <title>IRR index page</title>
 </head>
 <body>
-    <% for() %> 
+    <% for(let restaurant of restaurants) { %>
+        <h5><%= restaurant.name %></h5>
+        <p><%= restaurant.location %> </p>
+    <% } %> 
     
 </body>
 </html>

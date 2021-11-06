@@ -6,8 +6,8 @@ const router = express.Router();
 const Restaurant = require("../models/restaurant");
 
 router.get("/", async (req, res) => {
-  const restaurant = await Restaurant.find({});
-  res.send("/restaurants/index", { restaurant });
+  const restaurants = await Restaurant.find({});
+  res.render("./restaurants/index", { restaurants });
 });
 
 module.exports = router;
