@@ -44,6 +44,14 @@
 .nav__toggle-btn {
   border: none;
 }
+.nav__toggle-btn:hover {
+  cursor: pointer;
+}
+.nav__toggle-btn [aria-expanded=true] .icon-bar:is(:first-child, :last-child) {
+  position: absolute;
+  margin: 0;
+  width: 3rem;
+}
 
 .nav__icon-bar {
   display: block;
@@ -54,6 +62,15 @@
   border-radius: 0.1rem;
 }
 
+@media screen and (min-width: 769px) {
+  .nav__menu {
+    visibility: visible;
+  }
+
+  .nav__toggle-btn {
+    visibility: hidden;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;

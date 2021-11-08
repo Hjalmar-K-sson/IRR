@@ -46,8 +46,16 @@ $black: #000
 .nav__links-item-link
     font-family: $regular-font
 
+//Fix the icon bars so that they rotate into an "X" when navbar is expanded on small screens!!!!!!!
 .nav__toggle-btn
     border: none
+    &:hover
+        cursor: pointer
+    [aria-expanded = 'true']
+        .icon-bar:is(:first-child, :last-child)
+            position: absolute
+            margin: 0
+            width: 3rem
 
 .nav__icon-bar
     display: block
@@ -56,3 +64,10 @@ $black: #000
     background-color: $black
     margin: .4rem
     border-radius: 0.1rem
+
+@media screen and (min-width: 769px)
+    .nav__menu
+        visibility: visible
+
+    .nav__toggle-btn
+        visibility: hidden
