@@ -1,24 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@200;400;600&family=Noto+Serif+Display:wght@700&display=swap')
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&family=Oswald:wght@200;300;400&display=swap')
 //Fonts:    
 $logo-font: 'Noto Serif Display', serif
-$regular-font: 'Noto Sans Display', sans-serif
+$nav__menu-font: 'Oswald', sans-serif
 //Font weights
 $bold: 700
-$semi-bold: 600
 $regular: 400
+$light: 300
 $extra-light: 200
 //Colors
-$black: #000
-$dark-bg_light-font: hsl(0, 0%, 2%)
-$light-bg_dark-font: hsl(0, 0%, 100%)
-$dark-bg-hover: hsl(0, 0%, 15%)
-.navbar
+$success-mint: rgb(0, 209, 182)
+$danger-salmon: rgb(225, 115, 92)
+$alert-yellow: rgb(255, 221, 53)
+$main-anthracite: rgb(83, 84, 92)
+$main-black: rgb(48, 48, 48)
+$main-grey: rgb(164, 166, 168)
+$main-white: rgb(226, 234, 242)
+$nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4a6a8)
+.nav
     height: 4rem
     position: fixed
     top: 0
     right: 0
     left: 0
+    background: $main-black
 
 .nav__container
     display: flex
@@ -41,22 +45,36 @@ $dark-bg-hover: hsl(0, 0%, 15%)
     justify-content: center
     align-items: center
     list-style: none
+    background: $main-black
+    border-radius: 0 0 .1rem .1rem
+    // margin: 1rem 2rem
+    padding: .5rem
+
+.nav__links-item
+    justify-content: center
+
+.nav__links-item,
+.nav__links-item-link
 
 .nav__home-link,
 .nav__links-item-link
     text-decoration: none
     display: flex
     align-items: center
-    margin: 0 0.4rem
-    color: $black
+    color: $main-grey
 
 .nav__home-link
     font-family: $logo-font
 
 .nav__links-item-link
-    font-family: $regular-font
+    font-family: $nav__menu-font
+    border-radius: .5rem
+    margin: 0 .4rem
+    padding: .4rem
+    &:hover
+        background: $main-anthracite
+        color: $main-white
 
-//Fix the icon bars so that they rotate into an "X" when navbar is expanded on small screens!!!!!!!
 .nav__toggle-btn
     border: none
     background-color: transparent
@@ -71,9 +89,8 @@ $dark-bg-hover: hsl(0, 0%, 15%)
     display: block
     width: 2.5rem
     height: .3rem
-    background-color: $black
     margin: .1rem
-    border-radius: 0.1rem
+    background: $main-white
 
 .nav__toggle-btn[aria-expanded='true'] .nav__icon-bar:is(:first-child, :last-child)
     position: absolute
@@ -91,6 +108,7 @@ $dark-bg-hover: hsl(0, 0%, 15%)
 .nav__toggle-btn[aria-expanded='true'] + .nav__menu
     opacity: 1
     visibility: visible
+    background: transparent
 
 @media screen and (min-width: 769px)
 
@@ -104,7 +122,6 @@ $dark-bg-hover: hsl(0, 0%, 15%)
         opacity: 1
         position: static
         display: block
-        height: 100%
 
     .nav__links,
     .nav__toggle-btn[aria-expanded='true'] .nav__menu .nav__links
@@ -114,3 +131,4 @@ $dark-bg-hover: hsl(0, 0%, 15%)
         flex-direction: row
         width: 100%
         height: 100%
+        background: transparent

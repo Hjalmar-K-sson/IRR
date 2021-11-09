@@ -4,7 +4,7 @@
     box-sizing: border-box
     margin: 0
     padding: 0
-    border: 1px solid red
+    // border: 1px solid red
 
 body
     height: 100vh
@@ -14,3 +14,16 @@ body
     max-width: 1000px
     padding: 0 1.4rem
     margin: 0 auto
+
+main
+    margin-top: 5rem
+    display: grid
+    grid-template-columns: repeat(3, minmax(1fr, 200px))
+    grid-auto-rows: minmax(1fr, auto)
+
+.card
+    display: inline
+    // display: flex
+    // flex-direction: column
+    // justify-content: center
+    // align-items: center
