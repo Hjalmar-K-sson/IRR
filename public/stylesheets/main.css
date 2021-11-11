@@ -64,9 +64,14 @@
   background: #53545c;
   color: #e2eaf2;
 }
-.nav__links-item-link .nav__links-item-link--alert:hover {
+
+.nav__links-item-link--alert {
   background: #ffdd35;
   color: #e2eaf2;
+}
+.nav__links-item-link--alert:hover {
+  background: #e2eaf2;
+  color: #ffdd35;
 }
 
 .nav__toggle-btn {
@@ -174,7 +179,7 @@ body {
 }
 
 main {
-  margin: 5rem 0;
+  margin: 2rem 0;
 }
 
 .grid-wrapper {
