@@ -1,5 +1,24 @@
 @use './sass_partials/_navbar.sass'
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&family=Oswald:wght@200;300;400&display=swap')
+//Fonts:    
+$logo-font: 'Noto Serif Display', serif
+$nav__menu-font: 'Oswald', sans-serif
+//Font weights
+$bold: 700
+$regular: 400
+$light: 300
+$extra-light: 200
+//Colors
+$success-mint: rgb(0, 209, 182)
+$danger-salmon: rgb(225, 115, 92)
+$alert-yellow: rgb(255, 221, 53)
+$main-anthracite: rgb(83, 84, 92)
+$main-black: rgb(48, 48, 48)
+$main-grey: rgb(164, 166, 168)
+$main-white: rgb(226, 234, 242)
+$nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4a6a8)
+
 *
     box-sizing: border-box
     margin: 0
@@ -11,19 +30,28 @@ body
     line-height: 1.6
 
 .container
-    max-width: 1000px
-    padding: 0 1.4rem
+    max-width: 80%
+    padding: 5%
     margin: 0 auto
 
 main
     margin-top: 5rem
+
+.grid-wrapper
     display: grid
-    grid-template-columns: repeat(3, minmax(1fr, 200px))
-    grid-auto-rows: minmax(1fr, auto)
+    gap: 1rem
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
 
 .card
-    display: inline
-    // display: flex
-    // flex-direction: column
-    // justify-content: center
-    // align-items: center
+    grid-column: span 1
+    grid-row: span 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    border: 1px solid $main-anthracite
+    border-radius: 1rem
+    img
+        max-width: 100%
+        height: auto
+        border-radius: 1rem 1rem 0 0

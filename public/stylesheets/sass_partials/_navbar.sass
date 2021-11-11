@@ -16,6 +16,7 @@ $main-black: rgb(48, 48, 48)
 $main-grey: rgb(164, 166, 168)
 $main-white: rgb(226, 234, 242)
 $nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4a6a8)
+
 .nav
     height: 4rem
     position: fixed
@@ -53,9 +54,6 @@ $nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4
 .nav__links-item
     justify-content: center
 
-.nav__links-item,
-.nav__links-item-link
-
 .nav__home-link,
 .nav__links-item-link
     text-decoration: none
@@ -74,6 +72,10 @@ $nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4
     &:hover
         background: $main-anthracite
         color: $main-white
+    .nav__links-item-link--alert
+        &:hover
+            background: $alert-yellow
+            color: $main-white
 
 .nav__toggle-btn
     border: none

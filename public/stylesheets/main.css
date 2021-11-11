@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&family=Oswald:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&family=Oswald:wght@200;300;400&display=swap");
 .nav {
   height: 4rem;
   position: fixed;
@@ -60,6 +61,10 @@
 }
 .nav__links-item-link:hover {
   background: #53545c;
+  color: #e2eaf2;
+}
+.nav__links-item-link .nav__links-item-link--alert:hover {
+  background: #ffdd35;
   color: #e2eaf2;
 }
 
@@ -142,18 +147,33 @@ body {
 }
 
 .container {
-  max-width: 1000px;
-  padding: 0 1.4rem;
+  max-width: 80%;
+  padding: 5%;
   margin: 0 auto;
 }
 
 main {
   margin-top: 5rem;
+}
+
+.grid-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, minmax(1fr, 200px));
-  grid-auto-rows: minmax(1fr, auto);
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .card {
-  display: inline;
+  grid-column: span 1;
+  grid-row: span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #53545c;
+  border-radius: 1rem;
+}
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem 1rem 0 0;
 }/*# sourceMappingURL=main.css.map */
