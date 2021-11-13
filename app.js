@@ -36,7 +36,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //Setting up & configuring express-session (for storing session data, cookies)
-const secret = process.env.SECRET || "NotYetASecret";
+const secret = process.env.SECRET || "NotYetASecret"; //Find a good way to generate encrypted secret!
 const store = MongoStore.create({
   mongoUrl: dbUrl,
   secret,
