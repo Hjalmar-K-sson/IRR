@@ -2,15 +2,22 @@
 const mongoose = require("mongoose");
 //Defining the mongoose schema as a constant
 const Schema = mongoose.Schema;
-
-//Creating a new mongoose Schema for Restaurant objects
-const RestaurantSchema = new Schema({
-  name: String,
-  location: String,
-  description: String,
-  priceRange: String,
-  cuisine: String,
-  courses: [String],
+//Creating a partial Schema for images
+const ImageSchema = new Schema({
+  filename: String,
+  url: String,
+});
+ImageSchema.virtual("thumbnail").get(function () {
+  return this.url.replace("/upload", "/upload/w_200");
+});
+//Creating a partial Schema for addresses
+const RestaurantAddressSchema = new Schema({
+  city: String,
+  state_region: String,
+  country: String,
+  street: String,
+  houseNumber: String,
+  zipCode: String,
   geometry: {
     type: {
       type: String,
@@ -22,13 +29,29 @@ const RestaurantSchema = new Schema({
       required: true,
     },
   },
-  images: [
-    {
-      url: String,
-      filename: String,
-    },
-  ],
 });
+//Creating a partial Schema for restaurant courses
+const RestaurantCourseSchema = new Schema({
+  courseName: String,
+  courseImgs: [ImageSchema],
+});
+
+//Creating a new mongoose Schema for Restaurant objects
+const schemaOpts = {
+  toJSON: { virtuals: true },
+};
+const RestaurantSchema = new Schema(
+  {
+    name: String,
+    address: RestaurantAddressSchema,
+    description: String,
+    priceRange: String,
+    cuisine: String,
+    courses: [RestaurantCourseSchema],
+    images: [ImageSchema],
+  },
+  schemaOpts
+);
 
 //Exporting the Restaurant model
 module.exports = mongoose.model("Restaurant", RestaurantSchema);
