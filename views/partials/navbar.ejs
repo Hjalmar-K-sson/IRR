@@ -13,6 +13,12 @@
                 <li class="nav__links-item"><a href="/home" class="nav__links-item-link">Home</a></li>
                 <li class="nav__links-item"><a href="/restaurants" class="nav__links-item-link">Restaurants</a></li>
                 <li class="nav__links-item"><a href="/restaurants/new" class="nav__links-item-link nav__links-item-link--alert">Add restaurant</a></li>
+                <% if (!currentUser) { %>
+                    <li class="nav__links-item"><a href="/register" class="nav__links-item-link">Register</a></li>
+                    <li class="nav__links-item"><a href="/login" class="nav__links-item-link">Login</a></li>
+                <% } else { %>
+                    <li class="nav__links-item"><a href="/logout" class="nav__links-item-link">Logout</a></li>
+                    <% } %> 
             </ul>
         </div>
     </div>

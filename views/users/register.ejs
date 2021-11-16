@@ -1,0 +1,18 @@
+<% layout('layouts/boilerplate') %>
+    <section class="register">
+        <form class="register__form" action="/register" method="POST">
+            <div class="register__form-field">
+                <label class="register__form-field-label" for="username">Username:</label>
+                <input class="register__form-field-input" type="text" name="username" id="username" required autofocus>
+            </div>
+            <div class="register__form-field">
+                <label class="register__form-field-label" for="email">Email:</label>
+                <input class="register__form-field-input" type="email" name="email" id="email" required>
+            </div>
+            <div class="register__form-field">
+                <label class="register__form-field-label" for="password">Password:</label>
+                <input class="register__form-field-input" type="password" name="password" id="password" required>
+            </div>
+            <button class="register__form-btn">Register</button>
+        </form>
+    </section>

@@ -9,7 +9,7 @@ const flash = require("connect-flash");
 const MongoStore = require("connect-mongo");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
-const User = require("./models/user");
+const User = require("./public/javascripts/models/user");
 
 //Connecting app to MongoDB:
 const dbUrl = "mongodb://localhost:27017/IRR";
@@ -78,8 +78,10 @@ app.use((req, res, next) => {
 //Connecting router to app
 const homeRoute = require("./routes/home");
 const restaurantsRoutes = require("./routes/restaurants");
+const userRoutes = require("./routes/users");
 app.use("/home", homeRoute);
 app.use("/restaurants", restaurantsRoutes);
+app.use("/", userRoutes);
 
 //Listening for requests
 app.listen(3000, () => {
