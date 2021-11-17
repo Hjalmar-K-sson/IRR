@@ -2,17 +2,22 @@
     <section class="register">
         <form class="register__form" action="/register" method="POST">
             <div class="register__form-field">
-                <label class="register__form-field-label" for="username">Username:</label>
-                <input class="register__form-field-input" type="text" name="username" id="username" required autofocus>
+                <label class="register__form-field-label" for="username">Username</label>
+                <input class="register__form-field-input" type="text" name="username" id="username" placeholder=" "
+                    required autofocus>
             </div>
             <div class="register__form-field">
-                <label class="register__form-field-label" for="email">Email:</label>
-                <input class="register__form-field-input" type="email" name="email" id="email" required>
+                <label class="register__form-field-label" for="email">Email</label>
+                <input class="register__form-field-input" type="email" name="email" id="email"
+                    pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" placeholder=" "
+                    required>
             </div>
             <div class="register__form-field">
-                <label class="register__form-field-label" for="password">Password:</label>
-                <input class="register__form-field-input" type="password" name="password" id="password" required>
+                <label class="register__form-field-label" for="password">Password<span>(min. 8 characters, at least one
+                        upper and one lowercase letter, at least one special character)</span></label>
+                <input class="register__form-field-input" type="password" name="password" id="password"
+                    pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\]).{8,32}$" required>
             </div>
-            <button class="register__form-btn">Register</button>
+            <button id="submit" class="register__form-btn" type="submit">Register</button>
         </form>
     </section>
