@@ -24,3 +24,8 @@ module.exports.register = async (req, res, next) => {
 };
 
 //Add login & logout controllers
+module.exports.logout = (req, res) => {
+  req.logout();
+  req.flash('success', 'Thanks, see You!');
+  res.redirect('/restaurants');
+}

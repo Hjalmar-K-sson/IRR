@@ -1,1 +1,32 @@
 //Create dismissable alerts with pure html & css, solution in pinned chrome tab
+<% if (success && success.length) { %>
+    <div class="flash__success">
+        <input type="checkbox" id="flash-success"/>
+        <label class="close" title="close" for="flash-success">
+            <i class="fas fa-times"></i>
+        </label>
+        <p class="flash__success-inner">
+            <%= success %> 
+        </p>
+    </div>
+    <% } else if (alert && alert.length) { %>
+        <div class="flash__alert">
+            <input type="checkbox" id="flash-alert" />
+            <label class="close" title="close" for="flash-alert">
+                <i class="fas fa-times"></i>
+            </label>
+            <p class="flash__alert-inner">
+                <%= alert %>
+            </p>
+        </div>
+        <% } else if (error && error.length) { %>
+            <div class="error">
+                <input type="checkbox" id="flash-error" />
+                <label class="close" title="close" for="flash-error">
+                    <i class="fas fa-times"></i>
+                </label>
+                <p class="flash__error-inner">
+                    <%= error %>
+                </p>
+            </div>
+            <% } %> 
