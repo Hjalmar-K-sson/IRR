@@ -9,5 +9,6 @@ router
   .get(users.renderRegister)
   .post(catchAsync(users.register));
 
+router.get("/logout", users.logout);
 //Add login & logout routes + create login.ejs view!
 module.exports = router;
