@@ -24,8 +24,20 @@ module.exports.register = async (req, res, next) => {
 };
 
 //Add login & logout controllers
+module.exports.renderLogin = (req, res) => {
+  res.render("users/login");
+};
+
+module.exports.login = (req, res) => {
+  const { username } = req.body;
+  req.flash("success", `Welcome back, ${username}!`);
+  const redirectUrl = req.session.returnTo || "/restaurants";
+  delete req.session.returnTo;
+  res.redirect(redirectUrl);
+};
+
 module.exports.logout = (req, res) => {
   req.logout();
-  req.flash('success', 'Thanks, see You!');
-  res.redirect('/restaurants');
-}
+  req.flash("success", "Thanks, see You!");
+  res.redirect("/restaurants");
+};
