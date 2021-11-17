@@ -23,7 +23,6 @@ module.exports.register = async (req, res, next) => {
   }
 };
 
-//Add login & logout controllers
 module.exports.renderLogin = (req, res) => {
   res.render("users/login");
 };

@@ -1,6 +1,6 @@
 <% layout('layouts/boilerplate') %>
     <section class="register">
-        <form class="user__form" action="/register" method="POST">
+        <form class="user__form" action="/login" method="POST">
             <div class="user__form-field">
                 <label class=user__form-field-label" for="username">Username</label>
                 <input class="user__form-field-input" type="text" name="username" id="username" placeholder=" " required
@@ -18,9 +18,10 @@
                 <input class="user__form-field-input" type="password" name="password" id="password"
                      required>
             </div>
-            <button id="submit" class="user__form-btn" type="submit">Register</button>
+            <button id="submit" class="user__form-btn" type="submit">Login</button>
         </form>
     </section>
+
 
 <!-- //Email pattern: pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
 //Password pattern: pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@#$%^&(){}[]:;<>,.?/~_+-=|\]).{8,32}$" -->
