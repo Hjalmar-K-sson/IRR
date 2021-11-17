@@ -1,7 +1,3 @@
-@use './sass_partials/_navbar.sass'
-@use './sass_partials/_footer.sass'
-@use './sass_partials/_user-form.sass'
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&family=Oswald:wght@200;300;400&display=swap')
 //Fonts:    
 $logo-font: 'Noto Serif Display', serif
@@ -21,39 +17,10 @@ $main-grey: rgb(164, 166, 168)
 $main-white: rgb(226, 234, 242)
 $nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4a6a8)
 
-*
-    box-sizing: border-box
-    margin: 0
-    padding: 0
-    // border: 1px solid red
-
-body
-    height: 100vh
-    line-height: 1.6
-
-.container
-    max-width: 80%
-    padding: 5%
-    margin: 0 auto
-
-main
-    margin: 2rem 0
-
-.grid-wrapper
-    display: grid
-    gap: 1rem
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
-
-.card
-    grid-column: span 1
-    grid-row: span 1
+.user__form-container
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
-    border: 1px solid $main-anthracite
-    border-radius: 1rem
     img
-        max-width: 100%
-        height: auto
-        border-radius: 1rem 1rem 0 0
+        width: 25%

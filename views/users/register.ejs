@@ -1,5 +1,7 @@
 <% layout('layouts/boilerplate') %>
-    <section class="register">
+    <section class="user__form-container">
+        <img src="https://images.unsplash.com/photo-1560487765-67095b892dd1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1025&q=80" alt="2-color plate with plastic utensils">
+        <h1>Register</h1>
         <form class="user__form" action="/register" method="POST">
             <div class="user__form-field">
                 <label class=user__form-field-label" for="username">Username</label>
@@ -13,8 +15,7 @@
                     required>
             </div>
             <div class="user__form-field">
-                <label class="user__form-field-label" for="password">Password<span>(min. 8 characters, at least one
-                        upper and one lowercase letter, at least one special character)</span></label>
+                <label class="user__form-field-label" for="password">Password</label>
                 <input class="user__form-field-input" type="password" name="password" id="password"
                      required>
             </div>
