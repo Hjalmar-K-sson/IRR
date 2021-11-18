@@ -67,12 +67,12 @@
 }
 
 .nav__links-item-link--alert {
-  background: #ffdd35;
+  background: #ffd500;
   color: #e2eaf2;
 }
 .nav__links-item-link--alert:hover {
   background: #e2eaf2;
-  color: #ffdd35;
+  color: #ffd500;
 }
 
 .nav__toggle-btn {
