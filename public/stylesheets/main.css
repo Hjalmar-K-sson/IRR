@@ -169,9 +169,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 25%;
+  border: 1px solid #303030;
+  border-radius: 1rem;
 }
 .user__form-container img {
-  width: 25%;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .user__form-field {
@@ -205,19 +209,25 @@
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
-body {
+body, html {
   height: 100vh;
-  height: 100%;
 }
 
 .container {
+  height: 100%;
   padding: 0 2rem;
   margin: 5rem auto;
   display: flex;
   flex-direction: column;
   position: relative;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
