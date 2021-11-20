@@ -1,27 +1,27 @@
 <% layout('layouts/boilerplate') %>
-    <section class="user__form-container">
-        <img src="https://images.unsplash.com/photo-1560487765-67095b892dd1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1025&q=80" alt="2-color plate with plastic utensils">
-        <h1>Register</h1>
-        <form class="user__form" action="/register" method="POST">
-            <div class="user__form-field">
-                <label class=user__form-field-label" for="username">Username</label>
-                <input class="user__form-field-input" type="text" name="username" id="username" placeholder=" " required
-                    autofocus>
-            </div>
-            <div class="user__form-field">
-                <label class="user__form-field-label" for="email">Email</label>
-                <input class="user__form-field-input" type="email" name="email" id="email"
-                     placeholder=" "
-                    required>
-            </div>
-            <div class="user__form-field">
-                <label class="user__form-field-label" for="password">Password</label>
-                <input class="user__form-field-input" type="password" name="password" id="password"
-                     required>
-            </div>
-            <button id="submit" class="user__form-btn" type="submit">Register</button>
-        </form>
-    </section>
+    <div class="grid-wrapper">
+        <section class="user__form-container card">
+            <img src="https://images.unsplash.com/photo-1560487765-67095b892dd1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1025&q=80"
+                alt="2-color plate with plastic utensils">
+            <h1>Register</h1>
+            <form class="user__form" action="/register" method="POST">
+                <div class="user__form-field">
+                    <label class=user__form-field-label" for="username">Username</label>
+                    <input class="user__form-field-input" type="text" name="username" id="username" placeholder=" " required
+                        autofocus>
+                </div>
+                <div class="user__form-field">
+                    <label class="user__form-field-label" for="email">Email</label>
+                    <input class="user__form-field-input" type="email" name="email" id="email" placeholder=" " required>
+                </div>
+                <div class="user__form-field">
+                    <label class="user__form-field-label" for="password">Password</label>
+                    <input class="user__form-field-input" type="password" name="password" id="password" required>
+                </div>
+                <button id="submit" class="user__form-btn" type="submit">Register</button>
+            </form>
+        </section>
+    </div>
 
 <!-- //Email pattern: pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
 //Password pattern: pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@#$%^&(){}[]:;<>,.?/~_+-=|\]).{8,32}$" -->

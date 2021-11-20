@@ -17,22 +17,38 @@ $main-grey: rgb(164, 166, 168)
 $main-white: rgb(226, 234, 242)
 $nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4a6a8)
 
+// .footer
+//     color: $main-white
+//     background: $main-black
+//     font-family: $regular-font
+//     height: 3rem
+//     display: flex
+//     flex-direction: row
+//     justify-content: center
+//     align-items: center
+//     position: absolute
+//     left: 0
+//     right: 0
+//     bottom: 0
+
+// .footer__menu-links
+//     display: flex
+//     flex-direction: row
+//     list-style: none
+
 .footer
     color: $main-white
     background: $main-black
-    font-family: $regular-font
-    height: 3rem
     display: flex
     flex-direction: row
     justify-content: center
     align-items: center
-    margin-top: auto
-    position: absolute
-    bottom: 0
-    right: 0
-    left: 0
+    font-family: $regular-font
+    height: 4rem
 
 .footer__menu-links
     display: flex
     flex-direction: row
     list-style: none
+    .footer__menu-links-item
+        padding: 1rem
