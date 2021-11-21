@@ -153,6 +153,7 @@
   align-items: center;
   font-family: "Oswald", sans-serif;
   height: 4rem;
+  width: 100%;
 }
 
 .footer__menu-links {
@@ -164,8 +165,24 @@
   padding: 1rem;
 }
 
-.user__form-container img {
+.user__form-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.user__form-card {
+  max-width: 25rem;
   width: 100%;
+  margin: 0 auto;
+}
+.user__form-card img {
+  max-width: 25rem;
+  width: 100%;
+}
+
+h1 {
+  margin: 2rem auto;
 }
 
 .card {
@@ -188,12 +205,13 @@ body {
 
 .container {
   margin: 5rem auto;
-  min-height: calc(100vh - 8rem);
+  min-height: calc(100vh - 16rem);
+  text-align: center;
 }
 
 .grid-wrapper {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
 }
