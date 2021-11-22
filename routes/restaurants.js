@@ -4,11 +4,11 @@ const express = require("express");
 const router = express.Router();
 //Requiring the Restaurant model
 const Restaurant = require("../public/javascripts/models/restaurant");
+//Requiring Restaurant controllers
+const restaurants = require("../public/javascripts/controllers/restaurants");
+//Requiring async error catching middleware
+const catchAsync = require("../public/javascripts/utilities/catchAsync");
 
-router.get("/", async (req, res) => {
-  const restaurants = await Restaurant.find({});
-  // console.log(restaurants);
-  res.render("./restaurants/index", { restaurants });
-});
+router.route("/").get(catchAsync(restaurants.index));
 
 module.exports = router;
