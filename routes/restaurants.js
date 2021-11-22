@@ -7,6 +7,7 @@ const Restaurant = require("../public/javascripts/models/restaurant");
 
 router.get("/", async (req, res) => {
   const restaurants = await Restaurant.find({});
+  console.log(restaurants);
   res.render("./restaurants/index", { restaurants });
 });
 
