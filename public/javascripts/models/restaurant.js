@@ -1,5 +1,8 @@
 //Requiring mongoose
 const mongoose = require("mongoose");
+//Requiring user & review schemas
+const User = require("./user");
+const Review = require("./review");
 //Defining the mongoose schema as a constant
 const Schema = mongoose.Schema;
 //Creating a partial Schema for images
@@ -49,6 +52,16 @@ const RestaurantSchema = new Schema(
     cuisine: String,
     courses: [RestaurantCourseSchema],
     images: [ImageSchema],
+    author: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+    },
+    reviews: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Review",
+      },
+    ],
   },
   schemaOpts
 );
