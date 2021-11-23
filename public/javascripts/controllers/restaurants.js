@@ -22,3 +22,7 @@ module.exports.showRestaurant = async (req, res) => {
   }
   res.render("./restaurants/show", { restaurant });
 };
+
+module.exports.renderNewForm = (req, res) => {
+  res.render("./restaurants/new");
+};

@@ -11,6 +11,8 @@ const catchAsync = require("../public/javascripts/utilities/catchAsync");
 
 router.route("/").get(catchAsync(restaurants.index));
 
+router.route("/new").get(restaurants.renderNewForm);
+
 router.route("/:id").get(catchAsync(restaurants.showRestaurant));
 
 module.exports = router;
