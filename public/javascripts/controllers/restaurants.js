@@ -26,3 +26,22 @@ module.exports.showRestaurant = async (req, res) => {
 module.exports.renderNewForm = (req, res) => {
   res.render("./restaurants/new");
 };
+
+module.exports.createRestaurant = async (req, res) => {
+  const geoData = await mapbox.geocoder
+    .forwardGeocode({
+      query: req.body.restaurant.address,
+      limit: 1,
+    })
+    .send();
+  const newRestaurant = new Restaurant(req.body.restaurant);
+  newRestaurant.address.geometry = geoData.body.features[0].geometry;
+  newRestaurant.images = req.files.map((f) => ({
+    filename: f.filename,
+    url: f.url,
+  }));
+  newRestaurant.author = req.user.id;
+  await newRestaurant.save();
+  req.flash("success", "Restaurant Added!");
+  res.redirect(`/restaurants/${newRestaurant.id}`);
+};
