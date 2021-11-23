@@ -4,7 +4,7 @@
     <div class="grid-wrapper">
         <% for(let restaurant of restaurants) { %>
             <div class="card">
-                <img src="https://via.placeholder.com/200" alt="restaurant photo">
+                <a href="/restaurants/<%= restaurant.id %> "><img src="https://via.placeholder.com/200" alt="restaurant photo"></a>
                 <h5>
                     <%= restaurant.name %>
                 </h5>
