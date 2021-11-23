@@ -300,7 +300,7 @@ h1 {
   grid-column: span 1;
   grid-row: span 1;
   place-self: center;
-  box-shadow: 0 0.125rem 0.25rem rgba(48, 48, 48, 0.075);
+  box-shadow: 0 0 0.125rem 0.25rem rgba(48, 48, 48, 0.075);
   border-radius: 0 0 0.3rem 0.3rem;
 }
 .card img {
@@ -320,8 +320,9 @@ body {
 }
 
 .container {
+  height: 100%;
   margin: 5rem auto;
-  min-height: calc(100vh - 16rem);
+  min-height: calc(100vh - 8rem);
   text-align: center;
 }
 
