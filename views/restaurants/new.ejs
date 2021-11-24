@@ -4,22 +4,35 @@
         <h2>Add restaurant</h2>
         <form class="user__form" action="/restaurants" method="POST">
             <div class="user__form-field">
-                <input class="user__form-field-input" type="text" name="username" id="username" placeholder=" " required
+                <input class="user__form-field-input" type="text" name="restaurant[name]" id="name" placeholder=" " required
                     autofocus>
-                <label class=user__form-field-label" for="username">Username</label>
+                <label class=user__form-field-label" for="name">Name</label>
             </div>
             <div class="user__form-field">
-                <input class="user__form-field-input" type="email" name="email" id="email" placeholder=" " required>
-                <label class="user__form-field-label" for="email">Email</label>
+                <input class="user__form-field-input" type="text" name="restaurant[address][city]" id="city" placeholder=" " required>
+                <label class=user__form-field-label" for="city">City</label>
             </div>
             <div class="user__form-field">
-                <input class="user__form-field-input" type="password" name="password" id="password"
-                    title="8-32 characters, min. 1 uppercase letter, min. 1 lowercase letter, min. 1 number, min 1 special character."
-                    placeholder=" " required>
-                <label class="user__form-field-label" for="password">Password<span class="user__form-field-label-hint">
-                        8-32 characters, min. 1 uppercase letter, min. 1 lowercase letter, min. 1 number, min 1 special
-                        character.</span></label>
+                <input class="user__form-field-input" type="text" name="restaurant[address][state_region]" id="state_region" placeholder=" " required>
+                <label class=user__form-field-label" for="state_region">State / Region</label>
             </div>
+            <div class="user__form-field">
+                <input class="user__form-field-input" type="text" name="restaurant[address][street]" id="street" placeholder=" " required>
+                <label class=user__form-field-label" for="street">Street</label>
+            </div>
+            <div class="user__form-field">
+                <input class="user__form-field-input" type="text" name="restaurant[address][houseNumber]" id="houseNumber" placeholder=" " required>
+                <label class=user__form-field-label" for="houseNumber">House number</label>
+            </div>
+            <div class="user__form-field">
+                <input class="user__form-field-input" type="text" name="restaurant[address][zipCode]" id="zipCode" placeholder=" " required>
+                <label class=user__form-field-label" for="zipCode">Zipcode</label>
+            </div>
+            <div class="user__form-field">
+                <label class=user__form-field-label" for="description">Description</label>
+                <textarea class="user__form-field-textarea" type="text" name="restaurant[description]" id="description" placeholder=" " required></textarea>
+            </div>
+            
             <button id="submit" class="user__form-btn" type="submit">Register</button>
         </form>
     </div>

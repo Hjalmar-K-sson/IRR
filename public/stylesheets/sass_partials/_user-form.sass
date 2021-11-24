@@ -20,21 +20,6 @@ $nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4
 //Effects
 $transition-time: 0.3s
 
-// .user__form-container
-//     display: flex
-//     flex-direction: column
-//     justify-content: center
-//     align-items: center
-//     width: 25%
-//     border: 1px solid $main-black
-//     border-radius: 1rem
-//     img
-//         width: 100%
-//         border-radius: 1rem 1rem 0 0
-// .user__form-field
-//     display: block
-//     width: 6rem
-
 .user__form-container
     height: 100vh
     text-align: center
@@ -78,7 +63,8 @@ $transition-time: 0.3s
         transition: font-size $transition-time
     input[type="email"],
     input[type="password"],
-    input[type="text"]
+    input[type="text"],
+    textarea[type="text"]
         width: 100%
         height: 3rem
         padding: 16px 18px 0
@@ -94,16 +80,20 @@ $transition-time: 0.3s
         display: inline
 
 input + label,
-input:focus:invalid:placeholder-shown + label
+textarea + label,
+input:focus:invalid:placeholder-shown + label,
+textarea:focus:invalid:placeholder-shown + label
     top: 8px
     font-size: 11px
     transform: none
     transition: top $transition-time, transform $transition-time
 
-input:invalid:placeholder-shown + label
+input:invalid:placeholder-shown + label,
+textarea:invalid:placeholder-shown + label,
     top: 50%
     font-size: 20px
     transform: translate(0, -50%)
 
-input:invalid:not(:placeholder-shown)
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown),
     border: 1px solid red
