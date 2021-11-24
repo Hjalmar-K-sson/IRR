@@ -1,5 +1,6 @@
 const Restaurant = require("../models/restaurant");
 const ExpressError = require("./ExpressError");
+const { restaurantSchema, reviewSchema } = require("./joiSchemas");
 
 module.exports.isLoggedIn = (req, res, next) => {
   if (!req.isAuthenticated()) {
@@ -20,4 +21,12 @@ module.exports.isAutor = async (req, res, next) => {
   next();
 };
 
-module.exports.validateRestaurant = (req, res, next) => {};
+module.exports.validateRestaurant = (req, res, next) => {
+  const { error } = restaurantSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};

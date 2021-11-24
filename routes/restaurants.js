@@ -9,7 +9,10 @@ const restaurants = require("../public/javascripts/controllers/restaurants");
 //Requiring async error catching middleware
 const catchAsync = require("../public/javascripts/utilities/catchAsync");
 // Requiring file with other express middleware
-const { isLoggedIn } = require("../public/javascripts/utilities/middleware");
+const {
+  isLoggedIn,
+  validateRestaurant,
+} = require("../public/javascripts/utilities/middleware");
 //Requiring cloudinary storage config file
 const {
   cloudinary,
@@ -23,6 +26,7 @@ router
   .post(
     isLoggedIn,
     upload.array("image"),
+    validateRestaurant,
     catchAsync(restaurants.createRestaurant)
   );
 
