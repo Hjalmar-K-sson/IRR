@@ -1,4 +1,5 @@
-const Restaurant = require("./models/restaurant");
+const Restaurant = require("../models/restaurant");
+const ExpressError = require("./ExpressError");
 
 module.exports.isLoggedIn = (req, res, next) => {
   if (!req.isAuthenticated()) {
@@ -18,3 +19,5 @@ module.exports.isAutor = async (req, res, next) => {
   }
   next();
 };
+
+module.exports.validateRestaurant = (req, res, next) => {};
