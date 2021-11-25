@@ -4,9 +4,31 @@
         <h2>Add restaurant</h2>
         <form class="user__form" action="/restaurants" method="POST">
             <div class="user__form-field">
-                <input class="user__form-field-input" type="text" name="restaurant[name]" id="name" placeholder=" " required
-                    autofocus>
+                <input class="user__form-field-input" type="text" name="restaurant[name]" id="name" placeholder=" " required autofocus>
                 <label class=user__form-field-label" for="name">Name</label>
+            </div>
+            <div class="user__form-field">
+                <input class="user__form-field-input" type="text" name="restaurant[cuisine]" id="cuisine" placeholder=" " required>
+                <label class=user__form-field-label" for="cuisine">Cuisine</label>
+            </div>
+            <div class="user__form-field">
+                <label class=user__form-field-label" for="priceRange">Price Range ($ - $$$$$)</label>
+                <select class="user__form-field-input" type="text" name="restaurant[priceRange]" id="priceRange" placeholder=" " required>
+                    <option value="$">$</option>
+                    <option value="$$">$$</option>
+                    <option value="$$$">$$$</option>
+                    <option value="$$$$">$$$$</option>
+                    <option value="$$$$$">$$$$$</option>
+                </select>
+            </div>
+            <div class="user__form-field">
+                <label class=user__form-field-label" for="description">Description</label>
+                <textarea class="user__form-field-textarea" type="text" name="restaurant[description]" id="description"
+                    placeholder=" " required></textarea>
+            </div>
+            <div class="user__form-field user__form-field--file">
+                <label class="user__form-field-label user__form-field-label--file" for="images">Select image</label>
+                <input class="user__form-field-input user__form-field-input--file" type="file" name="restaurant[images]" id="images" placeholder=" " required multiple>
             </div>
             <div class="user__form-field">
                 <input class="user__form-field-input" type="text" name="restaurant[address][city]" id="city" placeholder=" " required>
@@ -28,10 +50,7 @@
                 <input class="user__form-field-input" type="text" name="restaurant[address][zipCode]" id="zipCode" placeholder=" " required>
                 <label class=user__form-field-label" for="zipCode">Zipcode</label>
             </div>
-            <div class="user__form-field">
-                <label class=user__form-field-label" for="description">Description</label>
-                <textarea class="user__form-field-textarea" type="text" name="restaurant[description]" id="description" placeholder=" " required></textarea>
-            </div>
+            
             
             <button id="submit" class="user__form-btn" type="submit">Register</button>
         </form>

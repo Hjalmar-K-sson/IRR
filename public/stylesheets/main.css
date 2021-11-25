@@ -221,7 +221,8 @@
 .user__form-field input[type=email],
 .user__form-field input[type=password],
 .user__form-field input[type=text],
-.user__form-field textarea[type=text] {
+.user__form-field textarea[type=text],
+.user__form-field select[type=text] {
   width: 100%;
   height: 3rem;
   padding: 16px 18px 0;
@@ -235,11 +236,11 @@
   display: none;
   font-size: 11px;
 }
-input:focus ~ label .user__form-field-label-hint {
+input:focus ~ label .user__form-field-label-hint, textarea:focus ~ label .user__form-field-label-hint, select:focus ~ label .user__form-field-label-hint {
   display: inline;
 }
 
-input:focus:invalid:-moz-placeholder-shown + label {
+input[type=email]:focus:invalid:-moz-placeholder-shown + label, input[type=password]:focus:invalid:-moz-placeholder-shown + label, input[type=text]:focus:invalid:-moz-placeholder-shown + label, textarea:focus:invalid:-moz-placeholder-shown + label, select:focus:invalid:-moz-placeholder-shown + label {
   top: 8px;
   font-size: 11px;
   transform: none;
@@ -247,7 +248,7 @@ input:focus:invalid:-moz-placeholder-shown + label {
   transition: top 0.3s, transform 0.3s;
 }
 
-input:focus:invalid:-ms-input-placeholder + label {
+input[type=email]:focus:invalid:-ms-input-placeholder + label, input[type=password]:focus:invalid:-ms-input-placeholder + label, input[type=text]:focus:invalid:-ms-input-placeholder + label, textarea:focus:invalid:-ms-input-placeholder + label, select:focus:invalid:-ms-input-placeholder + label {
   top: 8px;
   font-size: 11px;
   transform: none;
@@ -256,40 +257,50 @@ input:focus:invalid:-ms-input-placeholder + label {
 }
 
 input + label,
-input:focus:invalid:placeholder-shown + label {
+textarea + label,
+select + label,
+input[type=email]:focus:invalid:placeholder-shown + label,
+input[type=password]:focus:invalid:placeholder-shown + label,
+input[type=text]:focus:invalid:placeholder-shown + label,
+textarea:focus:invalid:placeholder-shown + label,
+select:focus:invalid:placeholder-shown + label {
   top: 8px;
   font-size: 11px;
   transform: none;
   transition: top 0.3s, transform 0.3s;
 }
 
-input:invalid:-moz-placeholder-shown + label {
+input:invalid:-moz-placeholder-shown + label, textarea:invalid:-moz-placeholder-shown + label, select:invalid:-moz-placeholder-shown + label {
   top: 50%;
   font-size: 20px;
   transform: translate(0, -50%);
 }
 
-input:invalid:-ms-input-placeholder + label {
+input:invalid:-ms-input-placeholder + label, textarea:invalid:-ms-input-placeholder + label, select:invalid:-ms-input-placeholder + label {
   top: 50%;
   font-size: 20px;
   transform: translate(0, -50%);
 }
 
-input:invalid:placeholder-shown + label {
+input:invalid:placeholder-shown + label,
+textarea:invalid:placeholder-shown + label,
+select:invalid:placeholder-shown + label {
   top: 50%;
   font-size: 20px;
   transform: translate(0, -50%);
 }
 
-input:invalid:not(:-moz-placeholder-shown) {
+input:invalid:not(:-moz-placeholder-shown), textarea:invalid:not(:-moz-placeholder-shown), select:invalid:not(:-moz-placeholder-shown) {
   border: 1px solid red;
 }
 
-input:invalid:not(:-ms-input-placeholder) {
+input:invalid:not(:-ms-input-placeholder), textarea:invalid:not(:-ms-input-placeholder), select:invalid:not(:-ms-input-placeholder) {
   border: 1px solid red;
 }
 
-input:invalid:not(:placeholder-shown) {
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown),
+select:invalid:not(:placeholder-shown) {
   border: 1px solid red;
 }
 
