@@ -240,7 +240,7 @@ input:focus ~ label .user__form-field-label-hint, textarea:focus ~ label .user__
   display: inline;
 }
 
-input[type=email]:focus:invalid:-moz-placeholder-shown + label, input[type=password]:focus:invalid:-moz-placeholder-shown + label, input[type=text]:focus:invalid:-moz-placeholder-shown + label, textarea:focus:invalid:-moz-placeholder-shown + label, select:focus:invalid:-moz-placeholder-shown + label {
+input:focus:invalid:-moz-placeholder-shown + label, textarea:focus:invalid:-moz-placeholder-shown + label, select:focus:invalid:-moz-placeholder-shown + label {
   top: 8px;
   font-size: 11px;
   transform: none;
@@ -248,7 +248,7 @@ input[type=email]:focus:invalid:-moz-placeholder-shown + label, input[type=passw
   transition: top 0.3s, transform 0.3s;
 }
 
-input[type=email]:focus:invalid:-ms-input-placeholder + label, input[type=password]:focus:invalid:-ms-input-placeholder + label, input[type=text]:focus:invalid:-ms-input-placeholder + label, textarea:focus:invalid:-ms-input-placeholder + label, select:focus:invalid:-ms-input-placeholder + label {
+input:focus:invalid:-ms-input-placeholder + label, textarea:focus:invalid:-ms-input-placeholder + label, select:focus:invalid:-ms-input-placeholder + label {
   top: 8px;
   font-size: 11px;
   transform: none;
@@ -259,9 +259,7 @@ input[type=email]:focus:invalid:-ms-input-placeholder + label, input[type=passwo
 input + label,
 textarea + label,
 select + label,
-input[type=email]:focus:invalid:placeholder-shown + label,
-input[type=password]:focus:invalid:placeholder-shown + label,
-input[type=text]:focus:invalid:placeholder-shown + label,
+input:focus:invalid:placeholder-shown + label,
 textarea:focus:invalid:placeholder-shown + label,
 select:focus:invalid:placeholder-shown + label {
   top: 8px;
@@ -302,6 +300,19 @@ input:invalid:not(:placeholder-shown),
 textarea:invalid:not(:placeholder-shown),
 select:invalid:not(:placeholder-shown) {
   border: 1px solid red;
+}
+
+.user__form-field-label--file {
+  width: 100%;
+  height: 3rem;
+  padding: 16px 18px 0;
+  border: 1px solid #303030;
+  border-radius: 1rem;
+  resize: none;
+  outline: none;
+  position: absolute;
+  left: 50%;
+  top: 0;
 }
 
 h1 {
