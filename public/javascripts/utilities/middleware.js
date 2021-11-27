@@ -11,7 +11,7 @@ module.exports.isLoggedIn = (req, res, next) => {
   next();
 };
 
-module.exports.isAutor = async (req, res, next) => {
+module.exports.isAuthor = async (req, res, next) => {
   const { id } = req.params;
   const restaurant = await Restaurant.findById(id);
   if (!restaurant.author.equals(req.user.id)) {
