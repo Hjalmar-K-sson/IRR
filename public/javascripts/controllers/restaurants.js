@@ -30,18 +30,24 @@ module.exports.renderNewForm = (req, res) => {
 module.exports.createRestaurant = async (req, res) => {
   const geoData = await mapbox.geocoder
     .forwardGeocode({
-      query: req.body.restaurant.address,
+      query: req.body.restaurant.address.toString(),
       limit: 1,
     })
     .send();
+  console.log(geoData);
   const newRestaurant = new Restaurant(req.body.restaurant);
+  console.log(newRestaurant);
   newRestaurant.address.geometry = geoData.body.features[0].geometry;
+  console.log(newRestaurant.address.geometry);
   newRestaurant.images = req.files.map((f) => ({
     filename: f.filename,
     url: f.url,
   }));
+  console.log(newRestaurant.images);
   newRestaurant.author = req.user.id;
+  console.log(newRestaurant.author);
   await newRestaurant.save();
+  console.log(newRestaurant);
   req.flash("success", "Restaurant Added!");
   res.redirect(`/restaurants/${newRestaurant.id}`);
 };

@@ -25,7 +25,7 @@ router
   .get(catchAsync(restaurants.index))
   .post(
     isLoggedIn,
-    upload.array("image"),
+    upload.array("images"),
     validateRestaurant,
     catchAsync(restaurants.createRestaurant)
   );
