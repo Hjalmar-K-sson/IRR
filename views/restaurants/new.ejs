@@ -2,7 +2,7 @@
 <section class="user__form-container">
     <div class="user__form-card">
         <h2>Add restaurant</h2>
-        <form class="user__form" action="/restaurants" method="POST">
+        <form class="user__form" action="/restaurants" method="POST" enctype="multipart/form-data">
             <div class="user__form-field">
                 <input class="user__form-field-input" type="text" name="restaurant[name]" id="name" placeholder=" " required autofocus>
                 <label class=user__form-field-label" for="name">Name</label>
@@ -28,7 +28,7 @@
             </div>
             <div class="user__form-field user__form-field--file">
                 <label class="user__form-field-label user__form-field-label--file" for="images">Select images</label>
-                <input class="user__form-field-input user__form-field-input--file" type="file" name="images" id="images" placeholder=" " required multiple>
+                <input class="user__form-field-input user__form-field-input--file" type="file" name="restaurant[images]" id="images" placeholder=" " required multiple>
             </div>
             <div class="user__form-field">
                 <input class="user__form-field-input" type="text" name="restaurant[address][city]" id="city" placeholder=" " required>

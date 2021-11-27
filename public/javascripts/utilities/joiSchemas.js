@@ -21,11 +21,11 @@ module.exports.restaurantSchema = Joi.object({
         url: Joi.string(),
       },
     },
+    images: Joi.object({
+      filename: Joi.string(),
+      url: Joi.string(),
+    }),
   }).required(),
-  images: Joi.object({
-    filename: Joi.string(),
-    url: Joi.string(),
-  }),
 });
 
 module.exports.reviewSchema = Joi.object({
