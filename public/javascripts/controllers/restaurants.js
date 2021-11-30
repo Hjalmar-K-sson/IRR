@@ -10,12 +10,14 @@ module.exports.index = async (req, res) => {
 };
 
 module.exports.showRestaurant = async (req, res) => {
-  const restaurant = await Restaurant.findById(req.params.id).populate({
-    path: "reviews",
-    populate: {
-      path: "author",
-    },
-  });
+  const restaurant = await Restaurant.findById(req.params.id)
+    .populate({
+      path: "reviews",
+      populate: {
+        path: "author",
+      },
+    })
+    .populate("author");
   if (!restaurant) {
     req.flash("error", "Sorry, this restautant does not exist :(");
     return res.redirect("/restaurants");
