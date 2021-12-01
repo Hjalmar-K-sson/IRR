@@ -30,7 +30,7 @@ router
     catchAsync(restaurants.createRestaurant)
   );
 
-router.route("/new").get(restaurants.renderNewForm);
+router.route("/new").get(isLoggedIn, restaurants.renderNewForm);
 
 router.route("/:id").get(catchAsync(restaurants.showRestaurant));
 

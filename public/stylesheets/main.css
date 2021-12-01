@@ -344,6 +344,12 @@ h1 {
        column-span: 1;
 }
 
+.flash .flash__inner {
+  display: block;
+  margin: 1rem;
+  padding: 1rem;
+}
+
 *, ::after, ::before {
   box-sizing: border-box;
   margin: 0;
