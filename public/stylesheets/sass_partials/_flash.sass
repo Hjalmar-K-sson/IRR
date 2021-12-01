@@ -21,3 +21,27 @@ $nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4
     display: block
     margin: 1rem
     padding: 1rem
+    border-radius: 3px
+
+.flash
+    input
+        display: none
+
+.flash .close
+    float: right
+    cursor: pointer
+
+.flash__icon
+    float: left
+
+.flash--success .flash__inner
+    border: 1px solid $success-mint
+    background: rgba(0, 209, 182, .3)
+
+.flash--alert .flash__inner
+    border: 1px solid $alert-yellow
+    background: rgba(255, 213, 0, .3)
+
+.flash--error .flash__inner
+    border: 1px solid $danger-salmon
+    background: rgba(225, 115, 92, .3)
