@@ -344,20 +344,37 @@ h1 {
        column-span: 1;
 }
 
+.flash input {
+  display: none;
+}
+.flash input + label {
+  top: 0;
+  font-size: inherit;
+}
 .flash .flash__inner {
   display: block;
   margin: 1rem;
   padding: 1rem;
   border-radius: 3px;
 }
-
-.flash input {
-  display: none;
-}
-
 .flash .close {
   float: right;
   cursor: pointer;
+}
+
+.flash input:checked ~ * {
+  -webkit-animation-name: dismiss, hide;
+          animation-name: dismiss, hide;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0s, 100ms;
+          animation-delay: 0s, 100ms;
 }
 
 .flash__icon {
@@ -379,6 +396,47 @@ h1 {
   background: rgba(225, 115, 92, 0.3);
 }
 
+@-webkit-keyframes dismiss {
+  0% {
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
+    font-size: 0.1px;
+    transform: scale(0);
+  }
+}
+
+@keyframes dismiss {
+  0% {
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
+    font-size: 0.1px;
+    transform: scale(0);
+  }
+}
+@-webkit-keyframes hide {
+  100% {
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+}
+@keyframes hide {
+  100% {
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+}
 *, ::after, ::before {
   box-sizing: border-box;
   margin: 0;
