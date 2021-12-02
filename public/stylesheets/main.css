@@ -344,6 +344,26 @@ h1 {
        column-span: 1;
 }
 
+.show__carousel .show__carousel-slides {
+  list-style: none;
+}
+.show__carousel .show__carousel-thumbnails {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+.show__carousel .show__carousel-thumbnails > input[type=radio] {
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
 .flash {
   position: relative;
 }

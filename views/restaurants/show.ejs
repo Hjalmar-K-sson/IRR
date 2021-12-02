@@ -1,8 +1,32 @@
 <% layout('layouts/boilerplate.ejs') %>
 <div class="grid-wrapper">
     <div class="row">
+        <div class="show__carousel">
+            
+            <ul class="show__carousel-slides">
+                <% restaurant.images.forEach((img, i) => { %>
+                    <li class="show__carousel-slide">
+                        <img src="<%= img.url %> " alt="<%= img.filename %> ">
+                    </li>
+                <% }) %>
+            </ul>
+            <% restaurant.images.forEach((img, i)=> { %>
+                <input type="radio" name="carousel-slide" id="slide-<%= i %>">
+                <% }) %>
+            <ul class="show__carousel-thumbnails">
+                <% restaurant.images.forEach((img, i) => { %>
+                    <li>
+                        <label for="slide-<%= i %>"><img src="<%= img.thumbnail %> " alt="<%= img.filename %> "></label>
+                    </li>
+                <% }) %>
+            </ul>
+             
+            
+        </div>
+    </div>
+    <div class="row">
         <img src="<%= restaurant.images[0].url %> " alt="restaurant image">
-        <div class="card">
+        <div class="show__card">
             <h3><%= restaurant.name %></h3>
             <h4><%= `${restaurant.address.street} ${restaurant.address.houseNumber}, ${restaurant.address.city}` %></h4>
             <h4><%= restaurant.cuisine %> </h4>
