@@ -344,24 +344,12 @@ h1 {
        column-span: 1;
 }
 
+.flash {
+  position: relative;
+}
 .flash input {
   display: none;
 }
-.flash input + label {
-  top: 0;
-  font-size: inherit;
-}
-.flash .flash__inner {
-  display: block;
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 3px;
-}
-.flash .close {
-  float: right;
-  cursor: pointer;
-}
-
 .flash input:checked ~ * {
   -webkit-animation-name: dismiss, hide;
           animation-name: dismiss, hide;
@@ -376,9 +364,27 @@ h1 {
   -webkit-animation-delay: 0s, 100ms;
           animation-delay: 0s, 100ms;
 }
+.flash input + label {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  font-size: inherit;
+}
+.flash .flash__inner {
+  display: block;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 3px;
+}
+.flash .close {
+  float: right;
+  cursor: pointer;
+}
 
 .flash__icon {
-  float: left;
+  position: absolute;
+  top: 35%;
+  left: 5%;
 }
 
 .flash--success .flash__inner {

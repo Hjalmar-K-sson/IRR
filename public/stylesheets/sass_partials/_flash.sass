@@ -18,10 +18,20 @@ $main-white: rgb(226, 234, 242)
 $nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4a6a8)
 
 .flash
+    position: relative
     input
         display: none
+        &:checked ~ *
+            animation-name: dismiss,hide
+            animation-duration: 300ms
+            animation-iteration-count: 1
+            animation-timing-function: ease
+            animation-fill-mode: forwards
+            animation-delay: 0s,100ms
         + label
-            top: 0
+            position: absolute
+            top: 25%
+            right: 5%
             font-size: inherit
     .flash__inner
         display: block
@@ -32,16 +42,10 @@ $nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4
         float: right
         cursor: pointer
 
-.flash input:checked ~ *
-    animation-name: dismiss,hide
-    animation-duration: 300ms
-    animation-iteration-count: 1
-    animation-timing-function: ease
-    animation-fill-mode: forwards
-    animation-delay: 0s,100ms
-
 .flash__icon
-    float: left
+    position: absolute
+    top: 35%
+    left: 5%
 
 .flash--success
     .flash__inner
