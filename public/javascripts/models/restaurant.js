@@ -11,7 +11,7 @@ const ImageSchema = new Schema({
   url: String,
 });
 ImageSchema.virtual("thumbnail").get(function () {
-  return this.url.replace("/upload", "/upload/w_200");
+  return this.url.replace("/upload", "/upload/c_fill,h_200,w_200");
 });
 //Creating a partial Schema for addresses
 const RestaurantAddressSchema = new Schema({
