@@ -11,13 +11,13 @@
                         <label class=user__form-field-label" for="username">Username</label>
                     </div>
                     <div class="user__form-field">
-                        <input class="user__form-field-input" type="email" name="email" id="email" placeholder=" " required>
+                        <input class="user__form-field-input" type="email" name="email" id="email" placeholder=" " pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
                         <label class="user__form-field-label" for="email">Email</label>
                     </div>
                     <div class="user__form-field">
                         <input class="user__form-field-input" type="password" name="password" id="password"
                             title="8-32 characters, min. 1 uppercase letter, min. 1 lowercase letter, min. 1 number, min 1 special character."
-                            placeholder=" " required>
+                            placeholder=" " pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@#$%^&(){}[]:;<>,.?/~_+-=|\]){8,32}$" required>
                         <label class="user__form-field-label" for="password">Password<span class="user__form-field-label-hint"> 8-32 characters, min. 1 uppercase letter, min. 1 lowercase letter, min. 1 number, min 1 special character.</span></label>
                     </div>
                     <button id="submit" class="user__form-btn" type="submit">Register</button>
