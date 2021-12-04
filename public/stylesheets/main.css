@@ -344,6 +344,12 @@ h1 {
        column-span: 1;
 }
 
+.show__carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 .show__carousel .show__carousel-slides {
   list-style: none;
 }
@@ -351,8 +357,18 @@ h1 {
   list-style: none;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
-.show__carousel .show__carousel-thumbnails > input[type=radio] {
+.show__carousel .show__carousel-thumbnails li {
+  margin: 0.5rem;
+}
+.show__carousel .show__carousel-thumbnails li:nth-of-type(1) {
+  margin-left: 0;
+}
+.show__carousel .show__carousel-thumbnails img:hover {
+  cursor: pointer;
+}
+.show__carousel > input {
   clip: rect(1px, 1px, 1px, 1px);
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
