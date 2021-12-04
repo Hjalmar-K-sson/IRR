@@ -2,26 +2,18 @@
 <div class="grid-wrapper">
     <div class="row">
         <div class="show__carousel">
-            
-            <ul class="show__carousel-slides">
-                <% restaurant.images.forEach((img, i) => { %>
-                    <li class="show__carousel-slide">
+            <% restaurant.images.forEach((img, i) => { %>
+                    <div class="show__carousel-slide">
                         <img src="<%= img.url %> " alt="<%= img.filename %> ">
-                    </li>
+                    </div>
                 <% }) %>
-            </ul>
-            <% restaurant.images.forEach((img, i)=> { %>
-                <input type="radio" name="carousel-slide" id="slide-<%= i %>">
+        </div>
+        <div class="show__carousel-nav">
+            <% restaurant.images.forEach((img, i) => { %>
+                    <div class="show__carousel-nav-element">
+                        <img src="<%= img.url %> " alt="<%= img.filename %> ">
+                    </div>
                 <% }) %>
-            <ul class="show__carousel-thumbnails">
-                <% restaurant.images.forEach((img, i) => { %>
-                    <li>
-                        <label for="slide-<%= i %>"><img src="<%= img.thumbnail %> " alt="<%= img.filename %> "></label>
-                    </li>
-                <% }) %>
-            </ul>
-             
-            
         </div>
     </div>
     <div class="row">
@@ -35,5 +27,4 @@
             <p>Submitted by: <%= restaurant.author.username %></p>
         </div>
     </div>
-    
 </div>
