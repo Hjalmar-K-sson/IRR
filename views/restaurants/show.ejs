@@ -2,18 +2,13 @@
 <div class="grid-wrapper">
     <div class="row">
         <div class="show__carousel">
+            <button><i class="fas fa-chevron-left"></i></button>
             <% restaurant.images.forEach((img, i) => { %>
-                    <div class="show__carousel-slide">
-                        <img src="<%= img.url %> " alt="<%= img.filename %> ">
+                    <div class="show__carousel-slide" id="slide-<%= i %>">
+                        <img src="<%= img.url %> " alt="<%= img.filename %>">
                     </div>
                 <% }) %>
-        </div>
-        <div class="show__carousel-nav">
-            <% restaurant.images.forEach((img, i) => { %>
-                    <div class="show__carousel-nav-element">
-                        <img src="<%= img.url %> " alt="<%= img.filename %> ">
-                    </div>
-                <% }) %>
+            <button><i class="fas fa-chevron-right"></i></button>
         </div>
     </div>
     <div class="row">
@@ -28,3 +23,7 @@
         </div>
     </div>
 </div>
+
+<script>
+
+</script>
