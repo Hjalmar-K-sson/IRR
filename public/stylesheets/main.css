@@ -342,8 +342,10 @@ h1 {
 .row {
   -moz-column-span: 1;
        column-span: 1;
+  row-span: 1;
 }
 
+<<<<<<< HEAD
 .show__carousel {
   display: flex;
   flex-direction: column;
@@ -378,6 +380,11 @@ h1 {
   overflow: hidden;
   padding: 0;
   position: absolute;
+=======
+.glide__arrows button {
+  color: #303030;
+  border-color: #303030;
+>>>>>>> experimental
 }
 
 .flash {
