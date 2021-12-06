@@ -1,26 +1,6 @@
 <% layout('layouts/boilerplate.ejs') %>
 <div class="grid-wrapper">
     <div class="row">
-<<<<<<< HEAD
-        <div class="show__carousel">
-            <ul class="show__carousel-slides">
-                <% restaurant.images.forEach((img, i) => { %>
-                    <li class="show__carousel-slide">
-                        <img src="<%= img.url %> " alt="<%= img.filename %> ">
-                    </li>
-                <% }) %>
-            </ul>
-            <% restaurant.images.forEach((img, i)=> { %>
-                <input type="radio" name="carousel-slide" id="slide-<%= i %>">
-                <% }) %>
-            <ul class="show__carousel-thumbnails">
-                <% restaurant.images.forEach((img, i) => { %>
-                    <li>
-                        <label for="slide-<%= i %>"><img src="<%= img.thumbnail %> " alt="<%= img.filename %> "></label>
-                    </li>
-                <% }) %>
-            </ul>
-=======
         <div class="glide">
             <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
@@ -38,7 +18,6 @@
                 <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
                 <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
             </div>
->>>>>>> experimental
         </div>
         <div class="show__card">
             <h3>
