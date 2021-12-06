@@ -342,6 +342,12 @@ h1 {
 .row {
   -moz-column-span: 1;
        column-span: 1;
+  row-span: 1;
+}
+
+.glide__arrows button {
+  color: #303030;
+  border-color: #303030;
 }
 
 .flash {
