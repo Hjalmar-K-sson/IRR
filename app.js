@@ -14,6 +14,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./public/javascripts/models/user");
 const mapboxgl = require("mapbox-gl");
+const methodOverride = require("method-override");
 
 //Connecting app to MongoDB:
 const dbUrl = "mongodb://localhost:27017/IRR";
@@ -38,6 +39,7 @@ app.use(express.static("public"));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride("_method"));
 
 //Setting up & configuring express-session (for storing session data, cookies)
 const secret = process.env.SECRET || "NotYetASecret"; //Find a good way to generate encrypted secret!
