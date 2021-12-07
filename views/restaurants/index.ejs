@@ -1,5 +1,5 @@
-<!-- https://res.cloudinary.com/doizzlsa5/image/upload/v1634988664/IRR/kristaps-grundsteins-tQMXs0ee8B0-unsplash_ub5yck.jpg -->
 <% layout('layouts/boilerplate.ejs') %> 
+    <div id="indexMap"></div>
     <h1>All Restaurants</h1>
     <div class="grid-wrapper">
         <% for(let restaurant of restaurants) { %>
@@ -20,3 +20,8 @@
             </div>
             <% } %>
     </div>
+    <script>
+        const mapboxToken = '<%- process.env.MAPBOX_TOKEN %>'
+        const restaurants = { features: <%- JSON.stringify(restaurants) %> };
+    </script>
+    <script src="/javascripts/utilities/indexMap.js"></script>
