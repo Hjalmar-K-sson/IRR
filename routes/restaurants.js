@@ -32,6 +32,9 @@ router
 
 router.route("/new").get(isLoggedIn, restaurants.renderNewForm);
 
-router.route("/:id").get(catchAsync(restaurants.showRestaurant));
+router
+  .route("/:id")
+  .get(catchAsync(restaurants.showRestaurant))
+  .delete(isLoggedIn, catchAsync(restaurants.deleteRestaurant));
 
 module.exports = router;
