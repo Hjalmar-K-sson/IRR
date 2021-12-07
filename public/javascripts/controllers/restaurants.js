@@ -36,20 +36,21 @@ module.exports.createRestaurant = async (req, res) => {
       limit: 1,
     })
     .send();
-  console.log(geoData);
   const newRestaurant = new Restaurant(req.body.restaurant);
-  console.log(newRestaurant);
   newRestaurant.address.geometry = geoData.body.features[0].geometry;
-  console.log(newRestaurant.address.geometry);
   newRestaurant.images = req.files.map((f) => ({
     filename: f.filename,
     url: f.path,
   }));
-  console.log(newRestaurant.images);
   newRestaurant.author = req.user.id;
-  console.log(newRestaurant.author);
   await newRestaurant.save();
-  console.log(newRestaurant);
   req.flash("success", "Restaurant Added!");
   res.redirect(`/restaurants/${newRestaurant.id}`);
+};
+
+module.exports.deleteRestaurant = async (req, res) => {
+  const { id } = req.params;
+  await Restaurant.findByIdAndDelete(id);
+  req.flash("alert", "Restaurant deleted!");
+  res.redirect("/restaurants");
 };
