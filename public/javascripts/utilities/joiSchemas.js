@@ -5,7 +5,7 @@ module.exports.restaurantSchema = Joi.object({
     name: Joi.string().required(),
     address: {
       city: Joi.string().required(),
-      state_region: Joi.string(),
+      state_region: Joi.string().allow(null, ""),
       country: Joi.string().required(),
       street: Joi.string().required(),
       houseNumber: Joi.string(),
