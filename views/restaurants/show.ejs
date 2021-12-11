@@ -43,7 +43,7 @@
         </div>
     </div>
     <div class="row">
-        
+        <div id="showMap"></div>
         
     </div>
 </div>
@@ -54,3 +54,8 @@
 <script>
     new Glide('.glide').mount()
 </script>
+<script>
+    const mapboxToken = '<%- process.env.MAPBOX_TOKEN %>'
+    const restaurant = <%- JSON.stringify(restaurant) %>;
+</script>
+<script src="/javascripts/utilities/showMap.js"></script>
