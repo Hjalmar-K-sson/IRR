@@ -7,9 +7,6 @@ const map = new mapboxgl.Map({
 });
 
 map.on("load", () => {
-  // Add a new source from our GeoJSON data and
-  // set the 'cluster' option to true. GL-JS will
-  // add the point_count property to your source data.
   map.addSource("restaurants", {
     type: "geojson",
     // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
