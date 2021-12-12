@@ -10,3 +10,5 @@ const catchAsync = require("../public/javascripts/utilities/catchAsync");
 router
   .route("/")
   .post(isLoggedIn, validateReview, catchAsync(reviews.createReview));
+
+module.exports = router;
