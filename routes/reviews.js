@@ -1,5 +1,5 @@
 const express = require("express");
-const router = express.Router();
+const router = express.Router({ mergeParams: true });
 const reviews = require("../public/javascripts/controllers/reviews");
 const {
   isLoggedIn,
@@ -7,8 +7,6 @@ const {
 } = require("../public/javascripts/utilities/middleware");
 const catchAsync = require("../public/javascripts/utilities/catchAsync");
 
-router
-  .route("/")
-  .post(isLoggedIn, validateReview, catchAsync(reviews.createReview));
+router.post("/", isLoggedIn, validateReview, catchAsync(reviews.createReview));
 
 module.exports = router;
