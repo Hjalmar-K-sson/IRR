@@ -85,9 +85,11 @@ app.use((req, res, next) => {
 const homeRoute = require("./routes/home");
 const restaurantsRoutes = require("./routes/restaurants");
 const userRoutes = require("./routes/users");
+const reviewRoutes = require("./routes/reviews");
 app.use("/home", homeRoute);
 app.use("/restaurants", restaurantsRoutes);
 app.use("/", userRoutes);
+app.use("/restaurants/:id/reviews", reviewRoutes);
 
 //Listening for requests
 app.listen(3000, () => {
