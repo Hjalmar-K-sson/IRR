@@ -2,8 +2,6 @@
 const express = require("express");
 //Starting the Express Router
 const router = express.Router();
-//Requiring the Restaurant model
-const Restaurant = require("../public/javascripts/models/restaurant");
 //Requiring Restaurant controllers
 const restaurants = require("../public/javascripts/controllers/restaurants");
 //Requiring async error catching middleware
