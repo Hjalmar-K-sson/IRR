@@ -356,6 +356,9 @@ h1 {
      object-fit: cover;
 }
 
+.glide__arrows {
+  top: 50%;
+}
 .glide__arrows button {
   color: #303030;
   border-color: #303030;
