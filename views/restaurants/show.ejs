@@ -21,18 +21,18 @@
             
         </div>
         <div class="show__card">
-            <h3>
+            <p>
                 <%= restaurant.name %>
-            </h3>
-            <h4>
+            </p>
+            <p>
                 <%= `${restaurant.address.street} ${restaurant.address.houseNumber}, ${restaurant.address.city}` %>
-            </h4>
-            <h4>
+            </p>
+            <p>
                 <%= restaurant.cuisine %>
-            </h4>
-            <h4>
+            </p>
+            <p>
                 <%= restaurant.priceRange %>
-            </h4>
+            </p>
             <p>
                 <%= restaurant.description %>
             </p>
@@ -73,15 +73,15 @@
             </section>
         <% } %>
         <% for(review of restaurant.reviews) { %>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">
+            <div class="show__review card">
+                <div>
+                    <p>
                         <%= review.author.username %>
-                    </h5>
+                    </p>
                     <p class="starability-result" data-rating="<%=review.rating%>">
                         Rated: <%= review.rating %> stars
                     </p>
-                    <p class="card-text">
+                    <p>
                         <%= review.body %>
                     </p>
                     <% if(currentUser && review.author.equals(currentUser.id)) { %>
