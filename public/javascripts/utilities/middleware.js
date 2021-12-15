@@ -1,4 +1,5 @@
 const Restaurant = require("../models/restaurant");
+const Review = require("../models/review");
 const ExpressError = require("./ExpressError");
 const { restaurantSchema, reviewSchema } = require("./joiSchemas");
 
@@ -17,6 +18,15 @@ module.exports.isAuthor = async (req, res, next) => {
   if (!restaurant.author.equals(req.user.id)) {
     req.flash("error", "You are not authorized to do this!");
     return res.redirect(`/restaurants/${id}`);
+  }
+  next();
+};
+
+module.exports.isReviewAuthor = async (req, res, next) => {
+  const { id, reviewId } = req.params;
+  const review = await Review.findById(reviewId);
+  if (!review.author.equals(req.user.id)) {
+    req.flash("error", "You are not authorized to delete this review!");
   }
   next();
 };
