@@ -29,7 +29,15 @@ h1
     grid-column: span 1
     grid-row: span 1
     place-self: center
+    background: rgba($main-anthracite, .25)
     box-shadow: 0 0 .125rem .25rem rgba($main-black, .075)
     border-radius: .3rem .3rem .3rem .3rem
     img
         border-radius: .3rem .3rem 0 0
+    p
+        font-weight: $light
+        padding: .1rem
+        &:first-of-type
+            font-weight: $regular
+        &:last-child
+            margin-bottom: .5rem

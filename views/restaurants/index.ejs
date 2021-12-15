@@ -5,12 +5,12 @@
         <% for(let restaurant of restaurants) { %>
             <div class="card">
                 <a href="/restaurants/<%= restaurant.id %> "><img src="<%= restaurant.images[0].thumbnail %> " alt="restaurant photo"></a>
-                <h5>
+                <p>
                     <%= restaurant.name %>
-                </h5>
-                <h6>
-                    <%= restaurant.location %>
-                </h6>
+                </p>
+                <p>
+                    <%= restaurant.address.city %>, <%= restaurant.address.country %>
+                </p>
                 <p>
                     <%= restaurant.cuisine %>
                 </p>

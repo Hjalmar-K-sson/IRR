@@ -338,11 +338,22 @@ h1 {
   grid-column: span 1;
   grid-row: span 1;
   place-self: center;
+  background: rgba(83, 84, 92, 0.25);
   box-shadow: 0 0 0.125rem 0.25rem rgba(48, 48, 48, 0.075);
   border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
 }
 .card img {
   border-radius: 0.3rem 0.3rem 0 0;
+}
+.card p {
+  font-weight: 300;
+  padding: 0.1rem;
+}
+.card p:first-of-type {
+  font-weight: 400;
+}
+.card p:last-child {
+  margin-bottom: 0.5rem;
 }
 
 .row {
