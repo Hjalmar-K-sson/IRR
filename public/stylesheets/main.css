@@ -39,7 +39,7 @@
   align-items: center;
   list-style: none;
   background: #303030;
-  border-radius: 0 0 0.1rem 0.1rem;
+  border-radius: 0 0 0.3rem 0.3rem;
   padding: 0.5rem;
 }
 
@@ -61,7 +61,7 @@
 
 .nav__links-item-link {
   font-family: "Oswald", sans-serif;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   margin: 0 0.4rem;
   padding: 0.4rem;
 }
@@ -327,6 +327,7 @@ label.user__form-field-label--file:hover {
 #indexMap {
   width: 100%;
   height: 300px;
+  border-radius: 0.3rem;
 }
 
 h1 {
@@ -394,7 +395,7 @@ h1 {
   color: #e2eaf2;
   font-family: inherit;
   border-color: transparent;
-  border-radius: 1rem;
+  border-radius: 0.3rem;
   width: 100%;
 }
 .show__rating-input button:hover {
@@ -422,7 +423,7 @@ h1 {
   color: #e2eaf2;
   font-family: inherit;
   border-color: transparent;
-  border-radius: 1rem;
+  border-radius: 0.3rem;
 }
 .show__review button:hover {
   color: #e1735c;
@@ -461,7 +462,7 @@ h1 {
   display: block;
   margin: 1rem;
   padding: 1rem;
-  border-radius: 3px;
+  border-radius: 0.3rem;
 }
 .flash .close {
   float: right;
