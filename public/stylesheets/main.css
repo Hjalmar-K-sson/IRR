@@ -374,17 +374,34 @@ h1 {
   margin-bottom: 2rem;
 }
 
+.show__rating-input {
+  text-align: left;
+}
 .show__rating-input label {
-  display: block;
   margin-left: 0;
 }
 .show__rating-input textarea {
   display: block;
   width: 100%;
+  border-radius: 0.3rem;
 }
 .show__rating-input button {
   width: 25%;
   margin-left: 0;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: #00d1b6;
+  color: #e2eaf2;
+  font-family: inherit;
+  border-color: transparent;
+  border-radius: 1rem;
+  width: 100%;
+}
+.show__rating-input button:hover {
+  color: #00d1b6;
+  background: #e2eaf2;
+  border-color: #00d1b6;
+  cursor: pointer;
 }
 
 .show__review {
@@ -398,6 +415,20 @@ h1 {
 }
 .show__review p:first-of-type {
   font-weight: 400;
+}
+.show__review button {
+  padding: 0.5rem;
+  background: #e1735c;
+  color: #e2eaf2;
+  font-family: inherit;
+  border-color: transparent;
+  border-radius: 1rem;
+}
+.show__review button:hover {
+  color: #e1735c;
+  background: #e2eaf2;
+  border-color: #e1735c;
+  cursor: pointer;
 }
 
 .flash {
