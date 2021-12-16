@@ -376,7 +376,36 @@ h1 {
   border-color: #303030;
 }
 
-.show__card button {
+.show__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.show__card p {
+  padding: 0.5rem;
+}
+
+.show__card-buttons {
+  display: flex;
+  flex-direction: row;
+}
+.show__card-buttons button {
+  padding: 0.5rem;
+  background: #a4a6a8;
+  color: #e2eaf2;
+  font-family: inherit;
+  border-color: transparent;
+  border-radius: 0.3rem;
+  margin: 0 0.5rem;
+}
+.show__card-buttons button:hover {
+  color: #a4a6a8;
+  background: #e2eaf2;
+  border-color: #a4a6a8;
+  cursor: pointer;
+}
+.show__card-buttons form button {
   padding: 0.5rem;
   background: #e1735c;
   color: #e2eaf2;
@@ -384,7 +413,7 @@ h1 {
   border-color: transparent;
   border-radius: 0.3rem;
 }
-.show__card button:hover {
+.show__card-buttons form button:hover {
   color: #e1735c;
   background: #e2eaf2;
   border-color: #e1735c;

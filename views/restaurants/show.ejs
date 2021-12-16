@@ -28,19 +28,25 @@
                 <%= `${restaurant.address.street} ${restaurant.address.houseNumber}, ${restaurant.address.city}` %>
             </p>
             <p>
-                <%= restaurant.cuisine %>
+                Cuisine: <%= restaurant.cuisine %>
             </p>
             <p>
-                <%= restaurant.priceRange %>
+                Price range: <%= restaurant.priceRange %>
             </p>
             <p>
                 <%= restaurant.description %>
             </p>
             <p>Submitted by: <%= restaurant.author.username %>
             </p>
-            <form action="/restaurants/<%= restaurant.id %>?_method=DELETE" method="POST">
-                <button>Delete Restaurant</button>
-            </form>
+            <div class="show__card-buttons">
+                <% if (currentUser) { %>
+                    <form action="/restaurants/<%= restaurant.id %>?_method=DELETE" method="POST">
+                        <button>Delete Restaurant</button>
+                    </form>
+                    <button><a href="/restaurants/<%= restaurant.id %>/edit">Edit restaurant</a></button>
+                <% } %>
+                <button><a href="/redstaurants">Back to all restaurants</a></button>
+            </div>
         </div>
     </div>
     <div class="row">

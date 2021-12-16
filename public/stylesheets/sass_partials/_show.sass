@@ -33,18 +33,42 @@ $nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4
         border-color: $main-black
 
 .show__card
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    p
+        padding: .5rem
+
+.show__card-buttons
+    display: flex
+    flex-direction: row
     button
         padding: .5rem
-        background: $danger-salmon
+        background: $main-grey
         color: $main-white
         font-family: inherit
         border-color: transparent
         border-radius: .3rem
+        margin: 0 .5rem
         &:hover
-            color: $danger-salmon
+            color: $main-grey
             background: $main-white
-            border-color: $danger-salmon
+            border-color: $main-grey
             cursor: pointer
+    form
+        button
+            padding: .5rem
+            background: $danger-salmon
+            color: $main-white
+            font-family: inherit
+            border-color: transparent
+            border-radius: .3rem
+            &:hover
+                color: $danger-salmon
+                background: $main-white
+                border-color: $danger-salmon
+                cursor: pointer
 
 #showMap
     width: 100%
