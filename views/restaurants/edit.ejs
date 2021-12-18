@@ -29,12 +29,6 @@
                     <textarea class="user__form-field-textarea" type="text" name="restaurant[description]"
                         id="description" placeholder=" " required><%= restaurant.description %></textarea>
                 </div>
-                <div class="user__form-field user__form-field--file">
-                    <label class="user__form-field-label user__form-field-label--file" for="images">Select
-                        images</label>
-                    <input class="user__form-field-input user__form-field-input--file" type="file"
-                        name="restaurant[images]" id="images" placeholder=" " required multiple>
-                </div>
                 <div class="user__form-field">
                     <input class="user__form-field-input" type="text" name="restaurant[address][city]" id="city"
                         placeholder=" " value="<%= restaurant.address.city %>" required>
@@ -65,9 +59,17 @@
                         placeholder=" " value="<%= restaurant.address.country %>" required>
                     <label class=user__form-field-label" for="country">Country</label>
                 </div>
+                <div class="user__form-field user__form-field--file">
+                    <label class="user__form-field-label user__form-field-label--file" for="images">Add more images</label>
+                    <input class="user__form-field-input user__form-field-input--file" type="file" name="restaurant[images]" id="images"
+                        placeholder=" " required multiple>
+                </div>
 
 
-                <button id="submit" class="user__form-btn" type="submit">Register</button>
+                <!-- !!!FIND A WAY TO DISPLAY AND DELETE IMAGES!!! -->
+                
+                
+                <button id="submit" class="user__form-btn" type="submit">Update restaurant</button>
             </form>
         </div>
     </section>

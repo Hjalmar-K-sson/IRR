@@ -233,6 +233,9 @@
   resize: none;
   outline: none;
 }
+.user__form-field .usef__form-field--file {
+  margin-top: 1rem;
+}
 
 .user__form-field-label-hint {
   display: none;
