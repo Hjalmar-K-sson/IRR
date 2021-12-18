@@ -196,7 +196,7 @@
   color: #e2eaf2;
   font-family: inherit;
   border-color: transparent;
-  border-radius: 1rem;
+  border-radius: 0.3rem;
   width: 100%;
 }
 .user__form-card .user__form-btn:hover {
@@ -229,7 +229,7 @@
   height: 3rem;
   padding: 16px 18px 0;
   border: 1px solid #303030;
-  border-radius: 1rem;
+  border-radius: 0.3rem;
   resize: none;
   outline: none;
 }
@@ -309,7 +309,7 @@ label.user__form-field-label--file {
   height: 3rem;
   padding: 16px 18px 0;
   border: 1px solid #303030;
-  border-radius: 1rem;
+  border-radius: 0.3rem;
   resize: none;
   outline: none;
   position: absolute;
@@ -361,8 +361,24 @@ h1 {
        column-span: 1;
 }
 
+.glide__slides {
+  max-height: 40rem;
+}
+.glide__slides .glide__slide {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .glide__arrows {
   top: 50%;
+}
+.glide__arrows .glide__arrow--left {
+  left: -0.1rem;
+}
+.glide__arrows .glide__arrow--right {
+  right: -0.1rem;
 }
 .glide__arrows button {
   color: #303030;
@@ -399,6 +415,7 @@ h1 {
 .show__card-btns .show__card-btns--delete {
   background: #e1735c;
   color: #e2eaf2;
+  font-size: inherit;
 }
 .show__card-btns .show__card-btns--delete:hover {
   color: #e1735c;
@@ -485,6 +502,7 @@ h1 {
   background: #e1735c;
   color: #e2eaf2;
   font-family: inherit;
+  font-size: inherit;
   border-color: transparent;
   border-radius: 0.3rem;
 }
@@ -608,7 +626,7 @@ body {
 
 .container {
   height: 100%;
-  margin: 5rem auto;
+  margin: 7rem auto;
   min-height: calc(100vh - 8rem);
   text-align: center;
 }
@@ -622,36 +640,41 @@ body {
 
 @media (min-width: 320px) {
   .container {
-    max-width: 300px;
+    max-width: calc( 320px * 0.9 );
   }
 }
 @media (min-width: 425px) {
   .container {
-    max-width: 395px;
+    max-width: calc( 425px * 0.9 );
   }
 }
 @media (min-width: 576px) {
   .container {
-    max-width: 540px;
+    max-width: calc( 576px * 0.9 );
   }
 }
 @media (min-width: 768px) {
   .container {
-    max-width: 720px;
+    max-width: calc( 768px * 0.9 );
   }
 }
 @media (min-width: 992px) {
   .container {
-    max-width: 960px;
+    max-width: calc( 992px * 0.9 );
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1024px) {
   .container {
-    max-width: 1320px;
+    max-width: calc( 1024px * 0.9 );
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
   .container {
-    max-width: 1320px;
+    max-width: calc( 1440px * 0.9 );
+  }
+}
+@media (min-width: 2560px) {
+  .container {
+    max-width: calc( 2560px * 0.9 );
   }
 }/*# sourceMappingURL=main.css.map */
