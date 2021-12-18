@@ -29,6 +29,16 @@ module.exports.renderNewForm = (req, res) => {
   res.render("./restaurants/new");
 };
 
+module.exports.renderEditForm = async (req, res) => {
+  const { id } = req.params;
+  const restaurant = await Restaurant.findById(id);
+  if (!restaurant) {
+    req.flash("error", "This restaurant does not exist!");
+    return res.redirect("/restaurants");
+  }
+  res.render("./restaurants/edit", { restaurant });
+};
+
 module.exports.createRestaurant = async (req, res) => {
   const geoData = await mapbox.geocoder
     .forwardGeocode({
