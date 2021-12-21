@@ -64,10 +64,11 @@
                     <input class="user__form-field-input user__form-field-input--file" type="file" name="restaurant[images]" id="images"
                         placeholder=" " required multiple>
                 </div>
-
-
-                <!-- !!!FIND A WAY TO DISPLAY AND DELETE IMAGES!!! -->
-                
+                <div class="user__form-field user__form-field--deleteFile">
+                    <% restaurant.images.forEach((img, i) => { %> 
+                            <img src="<%= img.thumbnail %> " alt="Image_<%= i %> ">
+                        <% }) %> 
+                </div>
                 
                 <button id="submit" class="user__form-btn" type="submit">Update restaurant</button>
             </form>
