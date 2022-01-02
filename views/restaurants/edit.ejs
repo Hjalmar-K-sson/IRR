@@ -2,7 +2,7 @@
     <section class="user__form-container">
         <div class="user__form-card">
             <h2>Edit restaurant</h2>
-            <form class="user__form" action="/restaurants/<%= restaurant.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+            <form class="user__form" action="/restaurants/<%= restaurant.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="user__form-field">
                     <input class="user__form-field-input" type="text" name="restaurant[name]" id="name" placeholder=" " value="<%= restaurant.name %>"
                         required autofocus>
@@ -62,11 +62,15 @@
                 <div class="user__form-field user__form-field--file">
                     <label class="user__form-field-label user__form-field-label--file" for="images">Add more images</label>
                     <input class="user__form-field-input user__form-field-input--file" type="file" name="restaurant[images]" id="images"
-                        placeholder=" " required multiple>
+                        placeholder=" " multiple>
                 </div>
                 <div class="user__form-field user__form-field--deleteFile">
                     <% restaurant.images.forEach((img, i) => { %> 
-                            <img src="<%= img.thumbnail %> " alt="Image_<%= i %> ">
+                        <img src="<%= img.thumbnail %> " alt="Image_<%= i %> ">
+                        <div class="user__form-field--deleteFile--controls">
+                            <label for="image-<%= i %>">Delete</label>
+                            <input type="checkbox" name="deleteImages[]" id="image-<%= i %>" value="<%= img.filename %>">
+                        </div>
                         <% }) %> 
                 </div>
                 
