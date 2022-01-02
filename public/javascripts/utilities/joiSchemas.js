@@ -26,6 +26,7 @@ module.exports.restaurantSchema = Joi.object({
       url: Joi.string(),
     }),
   }).required(),
+  deleteImages: Joi.array(),
 });
 
 module.exports.reviewSchema = Joi.object({
