@@ -67,7 +67,7 @@
 }
 .nav__links-item-link:hover {
   background: #53545c;
-  color: #e2eaf2;
+  color: white;
 }
 
 .nav__links-item-link--alert {
@@ -90,13 +90,16 @@
   width: 3.5rem;
   height: 3.5rem;
 }
+.nav__toggle-btn:hover {
+  cursor: pointer;
+}
 
 .nav__icon-bar {
   display: block;
   width: 2.5rem;
   height: 0.3rem;
   margin: 0.1rem;
-  background: #e2eaf2;
+  background: white;
 }
 
 .nav__toggle-btn[aria-expanded=true] .nav__icon-bar:is(:first-child, :last-child) {
@@ -148,7 +151,7 @@
   }
 }
 .footer {
-  color: #e2eaf2;
+  color: white;
   background: #303030;
   display: flex;
   flex-direction: row;
@@ -193,7 +196,7 @@
   margin-top: 1rem;
   padding: 0.5rem;
   background: #00d1b6;
-  color: #e2eaf2;
+  color: white;
   font-family: inherit;
   border-color: transparent;
   border-radius: 0.3rem;
@@ -201,7 +204,7 @@
 }
 .user__form-card .user__form-btn:hover {
   color: #00d1b6;
-  background: #e2eaf2;
+  background: white;
   border-color: #00d1b6;
 }
 
@@ -327,9 +330,12 @@ label.user__form-field-label--file:hover {
   visibility: hidden;
 }
 
-div.user__form-field--deleteFile {
+.user__form-field--deleteFile {
   display: flex;
   flex-direction: row;
+}
+.user__form-field--deleteFile img {
+  width: 10rem;
 }
 
 #indexMap {
@@ -422,32 +428,32 @@ h1 {
 }
 .show__card-btns .show__card-btns--delete {
   background: #e1735c;
-  color: #e2eaf2;
+  color: white;
   font-size: inherit;
 }
 .show__card-btns .show__card-btns--delete:hover {
   color: #e1735c;
-  background: #e2eaf2;
+  background: white;
   border-color: #e1735c;
   cursor: pointer;
 }
 .show__card-btns .show__card-btns--edit {
   background: #ffd500;
-  color: #e2eaf2;
+  color: white;
 }
 .show__card-btns .show__card-btns--edit:hover {
   color: #ffd500;
-  background: #e2eaf2;
+  background: white;
   border-color: #ffd500;
   cursor: pointer;
 }
 .show__card-btns .show__card-btns--back {
   background: #a4a6a8;
-  color: #e2eaf2;
+  color: white;
 }
 .show__card-btns .show__card-btns--back:hover {
   color: #a4a6a8;
-  background: #e2eaf2;
+  background: white;
   border-color: #a4a6a8;
   cursor: pointer;
 }
@@ -479,7 +485,7 @@ h1 {
   margin-top: 1rem;
   padding: 0.5rem;
   background: #00d1b6;
-  color: #e2eaf2;
+  color: white;
   font-family: inherit;
   border-color: transparent;
   border-radius: 0.3rem;
@@ -487,7 +493,7 @@ h1 {
 }
 .show__rating-input .show__rating-input-btn:hover {
   color: #00d1b6;
-  background: #e2eaf2;
+  background: white;
   border-color: #00d1b6;
   cursor: pointer;
 }
@@ -508,7 +514,7 @@ h1 {
 .show__review button {
   padding: 0.5rem;
   background: #e1735c;
-  color: #e2eaf2;
+  color: white;
   font-family: inherit;
   font-size: inherit;
   border-color: transparent;
@@ -516,7 +522,7 @@ h1 {
 }
 .show__review button:hover {
   color: #e1735c;
-  background: #e2eaf2;
+  background: white;
   border-color: #e1735c;
   cursor: pointer;
 }
