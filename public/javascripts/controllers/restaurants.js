@@ -64,3 +64,36 @@ module.exports.deleteRestaurant = async (req, res) => {
   req.flash("alert", "Restaurant deleted!");
   res.redirect("/restaurants");
 };
+
+module.exports.updateRestaurant = async (req, res) => {
+  const { id } = req.params;
+  const geoData = await mapbox.geocoder
+    .forwardGeocode({
+      query: `${req.body.restaurant.address.street}, ${req.body.restaurant.address.city}`,
+      limit: 1,
+    })
+    .send();
+  const restaurant = await Restaurant.findByIdAndUpdate(
+    id,
+    {
+      ...req.body.restaurant,
+    },
+    { runValidators: true, new: true, useFindAndModify: false }
+  );
+  restaurant.address.geometry = geoData.body.features[0].geometry;
+  const imgs = req.files.map((f) => ({ url: f.path, filename: f.filename }));
+  if (restaurant.images) {
+    restaurant.images.push(...imgs);
+  }
+  await restaurant.save();
+  if (req.body.deleteImages) {
+    for (let filename of req.body.deleteImages) {
+      await cloudinary.uploader.destroy(filename);
+    }
+    await restaurant.updateOne({
+      $pull: { images: { filename: { $in: req.body.deleteImages } } },
+    });
+  }
+  req.flash("success", "Restaurant successfully updated!");
+  res.redirect(`/restaurants/${id}`);
+};
