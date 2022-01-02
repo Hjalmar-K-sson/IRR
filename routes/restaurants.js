@@ -36,7 +36,13 @@ router
   .route("/:id")
   .get(catchAsync(restaurants.showRestaurant))
   .delete(isLoggedIn, catchAsync(restaurants.deleteRestaurant))
-  .put(isLoggedIn, isAuthor);
+  .put(
+    isLoggedIn,
+    isAuthor,
+    upload.array("restaurant[images]"),
+    validateRestaurant,
+    catchAsync(restaurants.updateRestaurant)
+  );
 
 router
   .route("/:id/edit")
