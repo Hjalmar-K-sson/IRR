@@ -172,7 +172,7 @@
 }
 
 .user__form-container {
-  height: 100vh;
+  height: 100%;
   text-align: center;
 }
 
@@ -334,9 +334,13 @@ label.user__form-field-label--file:hover {
 .user__form-field--deleteFile {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 .user__form-field--deleteFile img {
   width: 10rem;
+  margin-bottom: 1rem;
 }
 
 #indexMap {
