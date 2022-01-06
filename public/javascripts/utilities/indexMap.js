@@ -1,3 +1,5 @@
+console.log(restaurants.features[0].address.geometry);
+
 mapboxgl.accessToken = mapboxToken;
 const map = new mapboxgl.Map({
   container: "indexMap",

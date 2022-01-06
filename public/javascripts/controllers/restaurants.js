@@ -5,6 +5,7 @@ const { authorize } = require("passport");
 
 module.exports.index = async (req, res) => {
   const restaurants = await Restaurant.find({});
+  // console.log(restaurants);
   res.render("./restaurants/index", { restaurants });
 };
 

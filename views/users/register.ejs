@@ -1,23 +1,26 @@
 <% layout('layouts/boilerplate') %>
-            <div class="logReg__form-card">
+    
+        <section class="user__form-container">
+            <div class="user__form-card">
                 <img src="https://images.unsplash.com/photo-1560487765-67095b892dd1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1025&q=80"
                     alt="2-color plate with plastic utensils">
                 <h2>Register</h2>
-                <form class="logReg__form" action="/register" method="POST">
-                    <div class="logReg__form-field">
-                        <input class="logReg__form-field-input" type="text" name="username" id="username" placeholder=" " required autofocus>
-                        <label class=logReg__form-field-label" for="username">Username</label>
+                <form class="user__form" action="/register" method="POST">
+                    <div class="user__form-field">
+                        <input class="user__form-field-input" type="text" name="username" id="username" placeholder=" " required autofocus>
+                        <label class=user__form-field-label" for="username">Username</label>
                     </div>
-                    <div class="logReg__form-field">
-                        <input class="logReg__form-field-input" type="email" name="email" id="email" placeholder=" " pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
-                        <label class="logReg__form-field-label" for="email">Email</label>
+                    <div class="user__form-field">
+                        <input class="user__form-field-input" type="email" name="email" id="email" placeholder=" " pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                        <label class="user__form-field-label" for="email">Email</label>
                     </div>
-                    <div class="logReg__form-field">
-                        <input class="logReg__form-field-input" type="password" name="password" id="password"
+                    <div class="user__form-field">
+                        <input class="user__form-field-input" type="password" name="password" id="password"
                             title="8-32 characters, min. 1 uppercase letter, min. 1 lowercase letter, min. 1 number, min 1 special character."
                             placeholder=" " pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@#$%^&(){}[]:;<>,.?/~_+-=|\]){8,32}$" required>
-                        <label class="logReg__form-field-label" for="password">Password<span class="user__form-field-label-hint"> 8-32 characters, min. 1 uppercase letter, min. 1 lowercase letter, min. 1 number, min 1 special character.</span></label>
+                        <label class="user__form-field-label" for="password">Password<span class="user__form-field-label-hint"> 8-32 characters, min. 1 uppercase letter, min. 1 lowercase letter, min. 1 number, min 1 special character.</span></label>
                     </div>
-                    <button id="submit" class="logReg__form-btn" type="submit">Register</button>
+                    <button id="submit" class="user__form-btn" type="submit">Register</button>
                 </form>
             </div>
+        </section>
