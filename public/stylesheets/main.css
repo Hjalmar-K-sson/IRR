@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&family=Oswald:wght@200;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&family=Oswald:wght@200;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&family=Oswald:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&family=Oswald:wght@200;300;400&display=swap");
 .nav {
   height: 4rem;
   position: fixed;
@@ -237,7 +238,7 @@
   resize: none;
   outline: none;
 }
-.user__form-field .usef__form-field--file {
+.user__form-field .user__form-field--file {
   margin-top: 1rem;
 }
 
@@ -341,6 +342,136 @@ label.user__form-field-label--file:hover {
 .user__form-field--deleteFile img {
   width: 10rem;
   margin-bottom: 1rem;
+}
+
+.logReg__form-card {
+  max-width: 25rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logReg__form-card img {
+  max-width: 25rem;
+  width: 100%;
+}
+.logReg__form-card .logReg__form {
+  width: 100%;
+}
+.logReg__form-card .logReg__form .logReg__form-btn {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background: #00d1b6;
+  color: white;
+  font-family: inherit;
+  border-color: transparent;
+  border-radius: 0.3rem;
+  width: 100%;
+}
+.logReg__form-card .logReg__form .logReg__form-btn:hover {
+  color: #00d1b6;
+  background: white;
+  border-color: #00d1b6;
+}
+
+.logReg__form-field {
+  display: block;
+  position: relative;
+  margin: 1rem auto;
+}
+.logReg__form-field label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: block;
+  position: absolute;
+  left: 18px;
+  transition: font-size 0.3s;
+}
+.logReg__form-field input[type=email],
+.logReg__form-field input[type=password],
+.logReg__form-field input[type=text] {
+  width: 100%;
+  height: 3rem;
+  padding: 16px 18px 0;
+  border: 1px solid #303030;
+  border-radius: 0.3rem;
+  resize: none;
+  outline: none;
+}
+
+input:focus:invalid:-moz-placeholder-shown + label {
+  top: 8px;
+  font-size: 11px;
+  transform: none;
+  -moz-transition: top 0.3s, transform 0.3s;
+  transition: top 0.3s, transform 0.3s;
+}
+
+input:focus:invalid:-ms-input-placeholder + label {
+  top: 8px;
+  font-size: 11px;
+  transform: none;
+  -ms-transition: top 0.3s, transform 0.3s;
+  transition: top 0.3s, transform 0.3s;
+}
+
+input + label,
+input:focus:invalid:placeholder-shown + label {
+  top: 8px;
+  font-size: 11px;
+  transform: none;
+  transition: top 0.3s, transform 0.3s;
+}
+
+input:invalid:-moz-placeholder-shown + label {
+  top: 50%;
+  font-size: 20px;
+  transform: translate(0, -50%);
+}
+
+input:invalid:-ms-input-placeholder + label {
+  top: 50%;
+  font-size: 20px;
+  transform: translate(0, -50%);
+}
+
+input:invalid:placeholder-shown + label {
+  top: 50%;
+  font-size: 20px;
+  transform: translate(0, -50%);
+}
+
+input:invalid:not(:-moz-placeholder-shown) {
+  border: 1px solid red;
+}
+
+input:invalid:not(:-ms-input-placeholder) {
+  border: 1px solid red;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border: 1px solid red;
+}
+
+label.logReg__form-field-label--file {
+  width: 100%;
+  height: 3rem;
+  padding: 16px 18px 0;
+  border: 1px solid #303030;
+  border-radius: 0.3rem;
+  resize: none;
+  outline: none;
+  position: absolute;
+  left: 0;
+  top: -50%;
+}
+label.logReg__form-field-label--file:hover {
+  cursor: pointer;
 }
 
 #indexMap {
