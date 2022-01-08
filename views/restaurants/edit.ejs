@@ -14,14 +14,24 @@
                         <label class="newEdit__form-field-label" for="cuisine">Cuisine</label>
                     </div>
                     <div class="newEdit__form-field">
-                        <label class="newEdit__form-field-label" for="priceRange">Price Range ($ - $$$$$)</label>
+                        <label class="newEdit__form-field-label" for="priceRange">Price Range</label>
                         <select class="newEdit__form-field-input" type="text" name="restaurant[priceRange]" id="priceRange"
                             placeholder=" " value="<%= restaurant.priceRange %>" required>
-                            <option value="$">$</option>
-                            <option value="$$">$$</option>
-                            <option value="$$$">$$$</option>
-                            <option value="$$$$">$$$$</option>
-                            <option value="$$$$$">$$$$$</option>
+                            <option <% if (restaurant.priceRange === '$') { %>
+                                selected
+                            <% } %> value="$">$</option>
+                            <option <% if (restaurant.priceRange === '$$') { %>
+                                selected
+                            <% } %> value="$$">$$</option>
+                            <option <% if (restaurant.priceRange === '$$$') { %>
+                                selected
+                            <% } %> value="$$$">$$$</option>
+                            <option <% if (restaurant.priceRange === '$$$$') { %>
+                                selected
+                            <% } %> value="$$$$">$$$$</option>
+                            <option <% if (restaurant.priceRange === '$$$$$') { %>
+                                selected
+                            <% } %> value="$$$$$">$$$$$</option>
                         </select>
                     </div>
                     <div class="newEdit__form-field">
