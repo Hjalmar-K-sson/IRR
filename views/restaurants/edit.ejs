@@ -1,22 +1,21 @@
 <% layout('layouts/boilerplate.ejs') %>
-        <section class="user__form-container">
-            <div class="user__form-card">
+            <div class="newEdit__form-card">
                 <h2>Edit restaurant</h2>
-                <form class="user__form" action="/restaurants/<%= restaurant.id %>?_method=PUT" method="POST"
+                <form class="newEdit__form" action="/restaurants/<%= restaurant.id %>?_method=PUT" method="POST"
                     enctype="multipart/form-data">
-                    <div class="user__form-field">
-                        <input class="user__form-field-input" type="text" name="restaurant[name]" id="name" placeholder=" "
+                    <div class="newEdit__form-field">
+                        <input class="newEdit__form-field-input" type="text" name="restaurant[name]" id="name" placeholder=" "
                             value="<%= restaurant.name %>" required autofocus>
-                        <label class=user__form-field-label" for="name">Name</label>
+                        <label class="newEdit__form-field-label" for="name">Name</label>
                     </div>
-                    <div class="user__form-field">
-                        <input class="user__form-field-input" type="text" name="restaurant[cuisine]" id="cuisine"
+                    <div class="newEdit__form-field">
+                        <input class="newEdit__form-field-input" type="text" name="restaurant[cuisine]" id="cuisine"
                             placeholder=" " value="<%= restaurant.cuisine %>" required>
-                        <label class=user__form-field-label" for="cuisine">Cuisine</label>
+                        <label class="newEdit__form-field-label" for="cuisine">Cuisine</label>
                     </div>
-                    <div class="user__form-field">
-                        <label class=user__form-field-label" for="priceRange">Price Range ($ - $$$$$)</label>
-                        <select class="user__form-field-input" type="text" name="restaurant[priceRange]" id="priceRange"
+                    <div class="newEdit__form-field">
+                        <label class="newEdit__form-field-label" for="priceRange">Price Range ($ - $$$$$)</label>
+                        <select class="newEdit__form-field-input" type="text" name="restaurant[priceRange]" id="priceRange"
                             placeholder=" " value="<%= restaurant.priceRange %>" required>
                             <option value="$">$</option>
                             <option value="$$">$$</option>
@@ -25,52 +24,52 @@
                             <option value="$$$$$">$$$$$</option>
                         </select>
                     </div>
-                    <div class="user__form-field">
-                        <label class=user__form-field-label" for="description">Description</label>
-                        <textarea class="user__form-field-textarea" type="text" name="restaurant[description]" id="description"
+                    <div class="newEdit__form-field">
+                        <label class="newEdit__form-field-label" for="description">Description</label>
+                        <textarea class="newEdit__form-field-textarea" type="text" name="restaurant[description]" id="description"
                             placeholder=" " required><%= restaurant.description %></textarea>
                     </div>
-                    <div class="user__form-field">
-                        <input class="user__form-field-input" type="text" name="restaurant[address][city]" id="city"
+                    <div class="newEdit__form-field">
+                        <input class="newEdit__form-field-input" type="text" name="restaurant[address][city]" id="city"
                             placeholder=" " value="<%= restaurant.address.city %>" required>
-                        <label class=user__form-field-label" for="city">City</label>
+                        <label class="newEdit__form-field-label" for="city">City</label>
                     </div>
-                    <div class="user__form-field">
-                        <input class="user__form-field-input" type="text" name="restaurant[address][state_region]"
+                    <div class="newEdit__form-field">
+                        <input class="newEdit__form-field-input" type="text" name="restaurant[address][state_region]"
                             id="state_region" placeholder=" " value="<%= restaurant.address.state_region %>">
-                        <label class=user__form-field-label" for="state_region">State / Region</label>
+                        <label class="newEdit__form-field-label" for="state_region">State / Region</label>
                     </div>
-                    <div class="user__form-field">
-                        <input class="user__form-field-input" type="text" name="restaurant[address][street]" id="street"
+                    <div class="newEdit__form-field">
+                        <input class="newEdit__form-field-input" type="text" name="restaurant[address][street]" id="street"
                             placeholder=" " value="<%= restaurant.address.street %>" required>
-                        <label class=user__form-field-label" for="street">Street</label>
+                        <label class="newEdit__form-field-label" for="street">Street</label>
                     </div>
-                    <div class="user__form-field">
-                        <input class="user__form-field-input" type="text" name="restaurant[address][houseNumber]"
+                    <div class="newEdit__form-field">
+                        <input class="newEdit__form-field-input" type="text" name="restaurant[address][houseNumber]"
                             id="houseNumber" placeholder=" " value="<%= restaurant.address.houseNumber %>" required>
-                        <label class=user__form-field-label" for="houseNumber">House number</label>
+                        <label class="newEdit__form-field-label" for="houseNumber">House number</label>
                     </div>
-                    <div class="user__form-field">
-                        <input class="user__form-field-input" type="text" name="restaurant[address][zipCode]" id="zipCode"
+                    <div class="newEdit__form-field">
+                        <input class="newEdit__form-field-input" type="text" name="restaurant[address][zipCode]" id="zipCode"
                             placeholder=" " value="<%= restaurant.address.zipCode %>" required>
-                        <label class=user__form-field-label" for="zipCode">Zipcode</label>
+                        <label class="newEdit__form-field-label" for="zipCode">Zipcode</label>
                     </div>
-                    <div class="user__form-field">
-                        <input class="user__form-field-input" type="text" name="restaurant[address][country]" id="country"
+                    <div class="newEdit__form-field">
+                        <input class="newEdit__form-field-input" type="text" name="restaurant[address][country]" id="country"
                             placeholder=" " value="<%= restaurant.address.country %>" required>
-                        <label class=user__form-field-label" for="country">Country</label>
+                        <label class="newEdit__form-field-label" for="country">Country</label>
                     </div>
-                    <div class="user__form-field user__form-field--file">
-                        <label class="user__form-field-label user__form-field-label--file" for="images">Add more images</label>
-                        <input class="user__form-field-input user__form-field-input--file" type="file" name="restaurant[images]"
+                    <div class="newEdit__form-field user__form-field--file">
+                        <label class="newEdit__form-field-label newEdit__form-field-label--file" for="images">Add more images</label>
+                        <input class="newEdit__form-field-input newEdit__form-field-input--file" type="file" name="restaurant[images]"
                             id="images" placeholder=" " multiple>
                     </div>
                     <h3>Delete images</h3>
                     <div class="grid-wrapper">
-                        <div class="user__form-field user__form-field--deleteFile">
+                        <div class="newEdit__form-field user__form-field--deleteFile">
                             <% restaurant.images.forEach((img, i)=> { %>
                                 <img src="<%= img.thumbnail %> " alt="Image_<%= i %> ">
-                                <div class="user__form-field--deleteFile--controls">
+                                <div class="newEdit__form-field--deleteFile--controls">
                                     <input type="checkbox" name="deleteImages[]" id="image-<%= i %>" value="<%= img.filename %>">
                                     <label for="image-<%= i %>">Delete</label>
                                 </div>
@@ -78,7 +77,10 @@
                         </div>
                     </div>
         
-                    <button id="submit" class="user__form-btn" type="submit">Update restaurant</button>
+                    <div class="newEdit__form-field--btns">
+                        <button id="submit" class="newEdit__form-btn newEdit__form-btn--success" type="submit">Update</button>
+                        <a href="/restaurants/<%= restaurant.id %>" class="newEdit__form-btn newEdit__form-btn--cancel" type="button">Cancel</a>
+                    </div>
                 </form>
             </div>
-        </section>
+        

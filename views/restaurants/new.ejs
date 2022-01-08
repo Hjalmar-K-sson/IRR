@@ -1,19 +1,18 @@
 <% layout('layouts/boilerplate.ejs') %>
-<section class="user__form-container">
-    <div class="user__form-card">
+    <div class="newEdit__form-card">
         <h2>Add restaurant</h2>
-        <form class="user__form" action="/restaurants" method="POST" enctype="multipart/form-data">
-            <div class="user__form-field">
-                <input class="user__form-field-input" type="text" name="restaurant[name]" id="name" placeholder=" " required autofocus>
-                <label class=user__form-field-label" for="name">Name</label>
+        <form class="newEdit__form" action="/restaurants" method="POST" enctype="multipart/form-data">
+            <div class="newEdit__form-field">
+                <input class="newEdit__form-field-input" type="text" name="restaurant[name]" id="name" placeholder=" " required autofocus>
+                <label class=newEdit__form-field-label" for="name">Name</label>
             </div>
-            <div class="user__form-field">
-                <input class="user__form-field-input" type="text" name="restaurant[cuisine]" id="cuisine" placeholder=" " required>
-                <label class=user__form-field-label" for="cuisine">Cuisine</label>
+            <div class="newEdit__form-field">
+                <input class="newEdit__form-field-input" type="text" name="restaurant[cuisine]" id="cuisine" placeholder=" " required>
+                <label class=newEdit__form-field-label" for="cuisine">Cuisine</label>
             </div>
-            <div class="user__form-field">
-                <label class=user__form-field-label" for="priceRange">Price Range ($ - $$$$$)</label>
-                <select class="user__form-field-input" type="text" name="restaurant[priceRange]" id="priceRange" placeholder=" " required>
+            <div class="newEdit__form-field">
+                <label class=newEdit__form-field-label" for="priceRange">Price Range ($ - $$$$$)</label>
+                <select class="newEdit__form-field-input" type="text" name="restaurant[priceRange]" id="priceRange" placeholder=" " required>
                     <option value="$">$</option>
                     <option value="$$">$$</option>
                     <option value="$$$">$$$</option>
@@ -21,42 +20,44 @@
                     <option value="$$$$$">$$$$$</option>
                 </select>
             </div>
-            <div class="user__form-field">
-                <label class=user__form-field-label" for="description">Description</label>
-                <textarea class="user__form-field-textarea" type="text" name="restaurant[description]" id="description"
+            <div class="newEdit__form-field">
+                <label class="newEdit__form-field-label" for="description">Description</label>
+                <textarea class="newEdit__form-field-textarea" type="text" name="restaurant[description]" id="description"
                     placeholder=" " required></textarea>
             </div>
-            <div class="user__form-field user__form-field--file">
-                <label class="user__form-field-label user__form-field-label--file" for="images">Select images</label>
-                <input class="user__form-field-input user__form-field-input--file" type="file" name="restaurant[images]" id="images" placeholder=" " required multiple>
+            <div class="newEdit__form-field newEdit__form-field--file">
+                <label class="newEdit__form-field-label newEdit__form-field-label--file" for="images">Select images</label>
+                <input class="newEdit__form-field-input newEdit__form-field-input--file" type="file" name="restaurant[images]" id="images" placeholder=" " required multiple>
             </div>
-            <div class="user__form-field">
-                <input class="user__form-field-input" type="text" name="restaurant[address][city]" id="city" placeholder=" " required>
-                <label class=user__form-field-label" for="city">City</label>
+            <div class="newEdit__form-field">
+                <input class="newEdit__form-field-input" type="text" name="restaurant[address][city]" id="city" placeholder=" " required>
+                <label class="newEdit__form-field-label" for="city">City</label>
             </div>
-            <div class="user__form-field">
-                <input class="user__form-field-input" type="text" name="restaurant[address][state_region]" id="state_region" placeholder=" ">
-                <label class=user__form-field-label" for="state_region">State / Region</label>
+            <div class="newEdit__form-field">
+                <input class="newEdit__form-field-input" type="text" name="restaurant[address][state_region]" id="state_region" placeholder=" ">
+                <label class="newEdit__form-field-label" for="state_region">State / Region</label>
             </div>
-            <div class="user__form-field">
-                <input class="user__form-field-input" type="text" name="restaurant[address][street]" id="street" placeholder=" " required>
-                <label class=user__form-field-label" for="street">Street</label>
+            <div class="newEdit__form-field">
+                <input class="newEdit__form-field-input" type="text" name="restaurant[address][street]" id="street" placeholder=" " required>
+                <label class="newEdit__form-field-label" for="street">Street</label>
             </div>
-            <div class="user__form-field">
-                <input class="user__form-field-input" type="text" name="restaurant[address][houseNumber]" id="houseNumber" placeholder=" " required>
-                <label class=user__form-field-label" for="houseNumber">House number</label>
+            <div class="newEdit__form-field">
+                <input class="newEdit__form-field-input" type="text" name="restaurant[address][houseNumber]" id="houseNumber" placeholder=" " required>
+                <label class="newEdit__form-field-label" for="houseNumber">House number</label>
             </div>
-            <div class="user__form-field">
-                <input class="user__form-field-input" type="text" name="restaurant[address][zipCode]" id="zipCode" placeholder=" " required>
-                <label class=user__form-field-label" for="zipCode">Zipcode</label>
+            <div class="newEdit__form-field">
+                <input class="newEdit__form-field-input" type="text" name="restaurant[address][zipCode]" id="zipCode" placeholder=" " required>
+                <label class="newEdit__form-field-label" for="zipCode">Zipcode</label>
             </div>
-            <div class="user__form-field">
-                <input class="user__form-field-input" type="text" name="restaurant[address][country]" id="country" placeholder=" " required>
-                <label class=user__form-field-label" for="country">Country</label>
+            <div class="newEdit__form-field">
+                <input class="newEdit__form-field-input" type="text" name="restaurant[address][country]" id="country" placeholder=" " required>
+                <label class="newEdit__form-field-label" for="country">Country</label>
             </div>
             
             
-            <button id="submit" class="user__form-btn" type="submit">Register</button>
+            <div class="newEdit__form-field--btns">
+                <button id="submit" class="newEdit__form-btn newEdit__form-btn--success" type="submit">Register</button>
+                <a href="/restaurants" class="newEdit__form-btn newEdit__form-btn--cancel" type="button">Cancel</a>
+            </div>
         </form>
     </div>
-</section>
