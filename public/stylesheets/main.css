@@ -172,12 +172,7 @@
   padding: 1rem;
 }
 
-.user__form-container {
-  height: 100%;
-  text-align: center;
-}
-
-.user__form-card {
+.newEdit__form-card {
   max-width: 25rem;
   width: 100%;
   margin: 0 auto;
@@ -186,36 +181,53 @@
   justify-content: center;
   align-items: center;
 }
-.user__form-card .user__form {
+.newEdit__form-card .newEdit__form {
   width: 100%;
 }
-.user__form-card img {
-  max-width: 25rem;
-  width: 100%;
+.newEdit__form-card .newEdit__form-field--btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.user__form-card .user__form-btn {
+.newEdit__form-card .newEdit__form-field--btns .newEdit__form-btn {
+  display: inline;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  padding: 0.5rem;
-  background: #00d1b6;
-  color: white;
+  padding: 1rem 0;
   font-family: inherit;
-  border-color: transparent;
+  border: 1px solid;
   border-radius: 0.3rem;
-  width: 100%;
+  width: 45%;
 }
-.user__form-card .user__form-btn:hover {
+
+.newEdit__form-btn--success {
+  color: white;
+  background: #00d1b6;
+}
+.newEdit__form-btn--success:hover {
   color: #00d1b6;
   background: white;
   border-color: #00d1b6;
+  cursor: pointer;
 }
 
-.user__form-field {
+.newEdit__form-btn--cancel {
+  color: white;
+  background: #e1735c;
+  text-decoration: none;
+}
+.newEdit__form-btn--cancel:hover {
+  color: #e1735c;
+  background: white;
+  border-color: #e1735c;
+}
+
+.newEdit__form-field {
   display: block;
   position: relative;
   margin: 1rem auto;
 }
-.user__form-field label {
+.newEdit__form-field label {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -225,11 +237,11 @@
   left: 18px;
   transition: font-size 0.3s;
 }
-.user__form-field input[type=email],
-.user__form-field input[type=password],
-.user__form-field input[type=text],
-.user__form-field textarea[type=text],
-.user__form-field select[type=text] {
+.newEdit__form-field input[type=email],
+.newEdit__form-field input[type=password],
+.newEdit__form-field input[type=text],
+.newEdit__form-field textarea[type=text],
+.newEdit__form-field select[type=text] {
   width: 100%;
   height: 3rem;
   padding: 16px 18px 0;
@@ -238,15 +250,15 @@
   resize: none;
   outline: none;
 }
-.user__form-field .user__form-field--file {
+.newEdit__form-field .newEdit__form-field--file {
   margin-top: 1rem;
 }
 
-.user__form-field-label-hint {
+.newEdit__form-field-label-hint {
   display: none;
   font-size: 11px;
 }
-input:focus ~ label .user__form-field-label-hint, textarea:focus ~ label .user__form-field-label-hint, select:focus ~ label .user__form-field-label-hint {
+input:focus ~ label .newEdit__form-field-label-hint, textarea:focus ~ label .newEdit__form-field-label-hint, select:focus ~ label .newEdit__form-field-label-hint {
   display: inline;
 }
 
@@ -312,7 +324,7 @@ select:invalid:not(:placeholder-shown) {
   border: 1px solid red;
 }
 
-label.user__form-field-label--file {
+label.newEdit__form-field-label--file {
   width: 100%;
   height: 3rem;
   padding: 16px 18px 0;
@@ -324,22 +336,22 @@ label.user__form-field-label--file {
   left: 0;
   top: -50%;
 }
-label.user__form-field-label--file:hover {
+label.newEdit__form-field-label--file:hover {
   cursor: pointer;
 }
 
-.user__form-field-input--file {
+.newEdit__form-field-input--file {
   visibility: hidden;
 }
 
-.user__form-field--deleteFile {
+.newEdit__form-field--deleteFile {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
-.user__form-field--deleteFile img {
+.newEdit__form-field--deleteFile img {
   width: 10rem;
   margin-bottom: 1rem;
 }
