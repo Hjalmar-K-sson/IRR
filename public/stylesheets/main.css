@@ -178,18 +178,34 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .newEdit__form-card .newEdit__form {
   width: 100%;
 }
-.newEdit__form-card .newEdit__form-field--btns {
+.newEdit__form-card .newEdit__form .newEdit__form-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+.newEdit__form-card .newEdit__form .newEdit__form-field label {
+  flex: 1;
+}
+.newEdit__form-card .newEdit__form .newEdit__form-field input, .newEdit__form-card .newEdit__form .newEdit__form-field select, .newEdit__form-card .newEdit__form .newEdit__form-field textarea {
+  flex: 3;
+  height: 3rem;
+  border-radius: 0.3rem;
+}
+
+.newEdit__form-field-btns {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.newEdit__form-card .newEdit__form-field--btns .newEdit__form-btn {
+.newEdit__form-field-btns .newEdit__form-btn {
   display: inline;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -199,149 +215,25 @@
   border-radius: 0.3rem;
   width: 45%;
 }
-
-.newEdit__form-btn--success {
+.newEdit__form-field-btns .newEdit__form-btn--success {
   color: white;
   background: #00d1b6;
 }
-.newEdit__form-btn--success:hover {
+.newEdit__form-field-btns .newEdit__form-btn--success:hover {
   color: #00d1b6;
   background: white;
   border-color: #00d1b6;
   cursor: pointer;
 }
-
-.newEdit__form-btn--cancel {
+.newEdit__form-field-btns .newEdit__form-btn--cancel {
   color: white;
   background: #e1735c;
   text-decoration: none;
 }
-.newEdit__form-btn--cancel:hover {
+.newEdit__form-field-btns .newEdit__form-btn--cancel:hover {
   color: #e1735c;
   background: white;
   border-color: #e1735c;
-}
-
-.newEdit__form-field {
-  display: block;
-  position: relative;
-  margin: 1rem auto;
-}
-.newEdit__form-field label {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  display: block;
-  position: absolute;
-  left: 18px;
-  transition: font-size 0.3s;
-}
-.newEdit__form-field input[type=email],
-.newEdit__form-field input[type=password],
-.newEdit__form-field input[type=text],
-.newEdit__form-field textarea[type=text],
-.newEdit__form-field select[type=text] {
-  width: 100%;
-  height: 3rem;
-  padding: 16px 18px 0;
-  border: 1px solid #303030;
-  border-radius: 0.3rem;
-  resize: none;
-  outline: none;
-}
-.newEdit__form-field .newEdit__form-field--file {
-  margin-top: 1rem;
-}
-
-.newEdit__form-field-label-hint {
-  display: none;
-  font-size: 11px;
-}
-input:focus ~ label .newEdit__form-field-label-hint, textarea:focus ~ label .newEdit__form-field-label-hint, select:focus ~ label .newEdit__form-field-label-hint {
-  display: inline;
-}
-
-input:focus:invalid:-moz-placeholder-shown + label, textarea:focus:invalid:-moz-placeholder-shown + label, select:focus:invalid:-moz-placeholder-shown + label {
-  top: 8px;
-  font-size: 11px;
-  transform: none;
-  -moz-transition: top 0.3s, transform 0.3s;
-  transition: top 0.3s, transform 0.3s;
-}
-
-input:focus:invalid:-ms-input-placeholder + label, textarea:focus:invalid:-ms-input-placeholder + label, select:focus:invalid:-ms-input-placeholder + label {
-  top: 8px;
-  font-size: 11px;
-  transform: none;
-  -ms-transition: top 0.3s, transform 0.3s;
-  transition: top 0.3s, transform 0.3s;
-}
-
-input + label,
-textarea + label,
-select + label,
-input:focus:invalid:placeholder-shown + label,
-textarea:focus:invalid:placeholder-shown + label,
-select:focus:invalid:placeholder-shown + label {
-  top: 8px;
-  font-size: 11px;
-  transform: none;
-  transition: top 0.3s, transform 0.3s;
-}
-
-input:invalid:-moz-placeholder-shown + label, textarea:invalid:-moz-placeholder-shown + label, select:invalid:-moz-placeholder-shown + label {
-  top: 50%;
-  font-size: 20px;
-  transform: translate(0, -50%);
-}
-
-input:invalid:-ms-input-placeholder + label, textarea:invalid:-ms-input-placeholder + label, select:invalid:-ms-input-placeholder + label {
-  top: 50%;
-  font-size: 20px;
-  transform: translate(0, -50%);
-}
-
-input:invalid:placeholder-shown + label,
-textarea:invalid:placeholder-shown + label,
-select:invalid:placeholder-shown + label {
-  top: 50%;
-  font-size: 20px;
-  transform: translate(0, -50%);
-}
-
-input:invalid:not(:-moz-placeholder-shown), textarea:invalid:not(:-moz-placeholder-shown), select:invalid:not(:-moz-placeholder-shown) {
-  border: 1px solid red;
-}
-
-input:invalid:not(:-ms-input-placeholder), textarea:invalid:not(:-ms-input-placeholder), select:invalid:not(:-ms-input-placeholder) {
-  border: 1px solid red;
-}
-
-input:invalid:not(:placeholder-shown),
-textarea:invalid:not(:placeholder-shown),
-select:invalid:not(:placeholder-shown) {
-  border: 1px solid red;
-}
-
-label.newEdit__form-field-label--file {
-  width: 100%;
-  height: 3rem;
-  padding: 16px 18px 0;
-  border: 1px solid #303030;
-  border-radius: 0.3rem;
-  resize: none;
-  outline: none;
-  position: absolute;
-  left: 0;
-  top: -50%;
-}
-label.newEdit__form-field-label--file:hover {
-  cursor: pointer;
-}
-
-.newEdit__form-field-input--file {
-  visibility: hidden;
 }
 
 .newEdit__form-field--deleteFile {
@@ -788,6 +680,7 @@ body {
 
 .container {
   height: 100%;
+  max-width: 90%;
   margin: 7rem auto;
   min-height: calc(100vh - 8rem);
   text-align: center;
@@ -798,45 +691,4 @@ body {
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-@media (min-width: 320px) {
-  .container {
-    max-width: calc( 320px * 0.9 );
-  }
-}
-@media (min-width: 425px) {
-  .container {
-    max-width: calc( 425px * 0.9 );
-  }
-}
-@media (min-width: 576px) {
-  .container {
-    max-width: calc( 576px * 0.9 );
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: calc( 768px * 0.9 );
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: calc( 992px * 0.9 );
-  }
-}
-@media (min-width: 1024px) {
-  .container {
-    max-width: calc( 1024px * 0.9 );
-  }
-}
-@media (min-width: 1440px) {
-  .container {
-    max-width: calc( 1440px * 0.9 );
-  }
-}
-@media (min-width: 2560px) {
-  .container {
-    max-width: calc( 2560px * 0.9 );
-  }
 }/*# sourceMappingURL=main.css.map */

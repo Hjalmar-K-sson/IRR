@@ -3,12 +3,14 @@
         <h2>Add restaurant</h2>
         <form class="newEdit__form" action="/restaurants" method="POST" enctype="multipart/form-data">
             <div class="newEdit__form-field">
-                <input class="newEdit__form-field-input" type="text" name="restaurant[name]" id="name" placeholder=" " required autofocus>
                 <label class=newEdit__form-field-label" for="name">Name</label>
+                <input class="newEdit__form-field-input" type="text" name="restaurant[name]" id="name" placeholder=" " required autofocus>
+                
             </div>
             <div class="newEdit__form-field">
-                <input class="newEdit__form-field-input" type="text" name="restaurant[cuisine]" id="cuisine" placeholder=" " required>
                 <label class=newEdit__form-field-label" for="cuisine">Cuisine</label>
+                <input class="newEdit__form-field-input" type="text" name="restaurant[cuisine]" id="cuisine" placeholder=" " required>
+                
             </div>
             <div class="newEdit__form-field">
                 <label class=newEdit__form-field-label" for="priceRange">Price Range</label>
@@ -30,32 +32,38 @@
                 <input class="newEdit__form-field-input newEdit__form-field-input--file" type="file" name="restaurant[images]" id="images" placeholder=" " required multiple>
             </div>
             <div class="newEdit__form-field">
-                <input class="newEdit__form-field-input" type="text" name="restaurant[address][city]" id="city" placeholder=" " required>
                 <label class="newEdit__form-field-label" for="city">City</label>
+                <input class="newEdit__form-field-input" type="text" name="restaurant[address][city]" id="city" placeholder=" " required>
+                
             </div>
             <div class="newEdit__form-field">
-                <input class="newEdit__form-field-input" type="text" name="restaurant[address][state_region]" id="state_region" placeholder=" ">
                 <label class="newEdit__form-field-label" for="state_region">State / Region</label>
+                <input class="newEdit__form-field-input" type="text" name="restaurant[address][state_region]" id="state_region" placeholder=" ">
+                
             </div>
             <div class="newEdit__form-field">
-                <input class="newEdit__form-field-input" type="text" name="restaurant[address][street]" id="street" placeholder=" " required>
                 <label class="newEdit__form-field-label" for="street">Street</label>
+                <input class="newEdit__form-field-input" type="text" name="restaurant[address][street]" id="street" placeholder=" " required>
+                
             </div>
             <div class="newEdit__form-field">
-                <input class="newEdit__form-field-input" type="text" name="restaurant[address][houseNumber]" id="houseNumber" placeholder=" " required>
                 <label class="newEdit__form-field-label" for="houseNumber">House number</label>
+                <input class="newEdit__form-field-input" type="text" name="restaurant[address][houseNumber]" id="houseNumber" placeholder=" " required>
+                
             </div>
             <div class="newEdit__form-field">
-                <input class="newEdit__form-field-input" type="text" name="restaurant[address][zipCode]" id="zipCode" placeholder=" " required>
                 <label class="newEdit__form-field-label" for="zipCode">Zipcode</label>
+                <input class="newEdit__form-field-input" type="text" name="restaurant[address][zipCode]" id="zipCode" placeholder=" " required>
+                
             </div>
             <div class="newEdit__form-field">
-                <input class="newEdit__form-field-input" type="text" name="restaurant[address][country]" id="country" placeholder=" " required>
                 <label class="newEdit__form-field-label" for="country">Country</label>
+                <input class="newEdit__form-field-input" type="text" name="restaurant[address][country]" id="country" placeholder=" " required>
+                
             </div>
             
             
-            <div class="newEdit__form-field--btns">
+            <div class="newEdit__form-field-btns">
                 <button id="submit" class="newEdit__form-btn newEdit__form-btn--success" type="submit">Register</button>
                 <a href="/restaurants" class="newEdit__form-btn newEdit__form-btn--cancel" type="button">Cancel</a>
             </div>
