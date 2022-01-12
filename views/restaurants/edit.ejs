@@ -78,13 +78,12 @@
                         
                     </div>
                     <div class="newEdit__form-field user__form-field--file">
-                        <label class="newEdit__form-field-label newEdit__form-field-label--file" for="images">Add more images</label>
                         <input class="newEdit__form-field-input newEdit__form-field-input--file" type="file" name="restaurant[images]"
                             id="images" placeholder=" " multiple>
+                        <label class="newEdit__form-field-label newEdit__form-field-label--file" for="images">Add more images</label>
                     </div>
                     <h3>Delete images</h3>
-                    <div class="grid-wrapper">
-                        <div class="newEdit__form-field user__form-field--deleteFile">
+                        <div class="newEdit__form-field newEdit__form-field--deleteFile">
                             <% restaurant.images.forEach((img, i)=> { %>
                                 <img src="<%= img.thumbnail %> " alt="Image_<%= i %> ">
                                 <div class="newEdit__form-field--deleteFile--controls">
@@ -94,7 +93,6 @@
                                 </div>
                                 <% }) %>
                         </div>
-                    </div>
         
                     <div class="newEdit__form-field-btns">
                         <button id="submit" class="newEdit__form-btn newEdit__form-btn--success" type="submit">Update</button>
