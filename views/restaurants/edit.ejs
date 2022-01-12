@@ -39,7 +39,7 @@
                     <div class="newEdit__form-field">
                         <label class="newEdit__form-field-label" for="description">Description</label>
                         <textarea class="newEdit__form-field-textarea" type="text" name="restaurant[description]" id="description"
-                            placeholder=" " required><%= restaurant.description %></textarea>
+                            placeholder=" " rows="7" required><%= restaurant.description %></textarea>
                     </div>
                     <div class="newEdit__form-field">
                         <label class="newEdit__form-field-label" for="city">City</label>
@@ -84,12 +84,12 @@
                     </div>
                     <h3>Delete images</h3>
                         <div class="newEdit__form-field newEdit__form-field--deleteFile">
-                            <% restaurant.images.forEach((img, i)=> { %>
-                                <img src="<%= img.thumbnail %> " alt="Image_<%= i %> ">
+                                <% restaurant.images.forEach((img, i)=> { %>
                                 <div class="newEdit__form-field--deleteFile--controls">
-                                    <label for="image-<%= i %>">Delete</label>
                                     <input type="checkbox" name="deleteImages[]" id="image-<%= i %>" value="<%= img.filename %>">
-                                    
+                                    <label for="image-<%= i %>">
+                                        <img src="<%= img.thumbnail %> " alt="Image_<%= i %> ">
+                                    </label>
                                 </div>
                                 <% }) %>
                         </div>

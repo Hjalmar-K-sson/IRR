@@ -270,16 +270,22 @@
   border-color: #e1735c;
 }
 
-.newEdit__form-field--deleteFile {
-  display: flex;
-  flex-direction: row;
+.newEdit__form-field--deleteFile.newEdit__form-field--deleteFile {
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
 }
-.newEdit__form-field--deleteFile img {
-  width: 5rem;
+.newEdit__form-field--deleteFile.newEdit__form-field--deleteFile img {
+  width: 10rem;
   margin-bottom: 1rem;
+}
+.newEdit__form-field--deleteFile.newEdit__form-field--deleteFile label::before {
+  color: white;
+  content: url("https://cdn4.iconfinder.com/data/icons/app-custom-ui-1/48/Check_circle-256.png");
+  transform: scale(0.1);
+  position: absolute;
+  z-index: 100;
+}
+.newEdit__form-field--deleteFile.newEdit__form-field--deleteFile input {
+  display: none;
 }
 
 .logReg__form-card {
