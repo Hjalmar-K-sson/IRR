@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&family=Oswald:wght@200;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&family=Oswald:wght@200;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&family=Oswald:wght@200;300;400&display=swap");
@@ -273,16 +274,41 @@
 .newEdit__form-field--deleteFile.newEdit__form-field--deleteFile {
   flex-wrap: wrap;
 }
+.newEdit__form-field--deleteFile.newEdit__form-field--deleteFile .icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.newEdit__form-field--deleteFile.newEdit__form-field--deleteFile .checked::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "";
+  color: transparent;
+  transform: scale(10);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+}
+.newEdit__form-field--deleteFile.newEdit__form-field--deleteFile input:checked + .checked::before {
+  content: "";
+  color: #e1735c;
+}
 .newEdit__form-field--deleteFile.newEdit__form-field--deleteFile img {
   width: 10rem;
   margin-bottom: 1rem;
+  border-radius: 0.3rem;
 }
-.newEdit__form-field--deleteFile.newEdit__form-field--deleteFile label::before {
-  color: white;
-  content: url("https://cdn4.iconfinder.com/data/icons/app-custom-ui-1/48/Check_circle-256.png");
-  transform: scale(0.1);
-  position: absolute;
-  z-index: 100;
+.newEdit__form-field--deleteFile.newEdit__form-field--deleteFile label {
+  position: relative;
+  display: inline-block;
+  width: 10rem;
+  height: 10rem;
+}
+.newEdit__form-field--deleteFile.newEdit__form-field--deleteFile label:hover {
+  cursor: pointer;
 }
 .newEdit__form-field--deleteFile.newEdit__form-field--deleteFile input {
   display: none;
