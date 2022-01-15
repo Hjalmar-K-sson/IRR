@@ -22,7 +22,7 @@
     </div>
     <script>
         const mapboxToken = '<%- process.env.MAPBOX_TOKEN %>';
-        const restaurants = { features: <%- JSON.stringify(restaurants)%> };
+        const restaurants = {features: <%- JSON.stringify(restaurants) %>};
         const centerPoint = <%- JSON.stringify(restaurants[0].address.geometry.coordinates) %>;
     </script>
     <script src="/javascripts/utilities/indexMap.js"></script>
