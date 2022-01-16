@@ -68,7 +68,7 @@ map.on("load", () => {
     filter: ["!", ["has", "point_count"]],
     paint: {
       "circle-color": "rgb(255, 213, 0)",
-      "circle-radius": 6,
+      "circle-radius": 7,
       "circle-stroke-width": 1,
       "circle-stroke-color": "#fff",
     },
