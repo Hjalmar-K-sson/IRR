@@ -66,5 +66,13 @@ const RestaurantSchema = new Schema(
   schemaOpts
 );
 
+RestaurantSchema.virtual("properties.popUpMarkup").get(function () {
+  return `
+    <strong><a href="/restaurants/${this.id}">${this.name}</a></strong>
+    <p>${this.priceRange}</p>
+    <p>${this.address.city}</p>
+  `;
+});
+
 //Exporting the Restaurant model
 module.exports = mongoose.model("Restaurant", RestaurantSchema);
