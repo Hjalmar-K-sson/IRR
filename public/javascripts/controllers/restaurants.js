@@ -41,12 +41,12 @@ module.exports.renderEditForm = async (req, res) => {
 module.exports.createRestaurant = async (req, res) => {
   const geoData = await mapbox.geocoder
     .forwardGeocode({
-      query: `${req.body.restaurant.address.street}, ${req.body.restaurant.address.city}`,
+      query: `${req.body.restaurant.address.street} ${req.body.restaurant.address.houseNumber}, ${req.body.restaurant.address.city}`,
       limit: 1,
     })
     .send();
   const newRestaurant = new Restaurant(req.body.restaurant);
-  newRestaurant.address.geometry = geoData.body.features[0].geometry;
+  newRestaurant.geometry = geoData.body.features[0].geometry;
   newRestaurant.images = req.files.map((f) => ({
     filename: f.filename,
     url: f.path,
