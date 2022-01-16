@@ -21,17 +21,6 @@ const RestaurantAddressSchema = new Schema({
   street: String,
   houseNumber: String,
   zipCode: String,
-  geometry: {
-    type: {
-      type: String,
-      enum: ["Point"],
-      // required: true,
-    },
-    coordinates: {
-      type: [Number],
-      required: true,
-    },
-  },
 });
 //Creating a partial Schema for restaurant courses
 const RestaurantCourseSchema = new Schema({
@@ -46,6 +35,17 @@ const schemaOpts = {
 const RestaurantSchema = new Schema(
   {
     name: String,
+    geometry: {
+      type: {
+        type: String,
+        enum: ["Point"],
+        required: true,
+      },
+      coordinates: {
+        type: [Number],
+        required: true,
+      },
+    },
     address: RestaurantAddressSchema,
     description: String,
     priceRange: String,
