@@ -732,6 +732,10 @@ h1 {
     border: 0px;
   }
 }
+h1 {
+  color: pink;
+}
+
 *, ::after, ::before {
   box-sizing: border-box;
   margin: 0;
