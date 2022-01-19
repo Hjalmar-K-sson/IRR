@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@700&family=Oswald:wght@200;300;400&display=swap')
+//Fonts:    
+$logo-font: 'Noto Serif Display', serif
+$regular-font: 'Oswald', sans-serif
+//Font weights
+$bold: 700
+$regular: 400
+$light: 300
+$extra-light: 200
+//Colors
+$success-mint: rgb(0, 209, 182)
+$danger-salmon: rgb(225, 115, 92)
+$alert-yellow: rgb(255, 213, 0)
+$main-anthracite: rgb(83, 84, 92)
+$main-black: rgb(48, 48, 48)
+$main-grey: rgb(164, 166, 168)
+$main-white: rgb(255, 255, 255)
+$nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4a6a8)
+
+body
+    height: 100vh
+    text-align: center
+    background-image: linear-gradient(rgba(000,000,000, 0.5), rgba(000,000,000, 0.5)), url('https://images.unsplash.com/photo-1522336572468-97b06e8ef143?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+
+.container
+    max-width: 80vw
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+.home__nav
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    flex-wrap: wrap
+    h3
+        font-size: 1.8rem
+        float: left
+        color: $main-white
+    nav
+        float: right
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        a
+            padding: 0 .25rem 0
+            font-size: 1.3rem
+            color: $main-grey
+            text-decoration: none
+            font-family: $regular-font
