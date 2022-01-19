@@ -1,1 +1,29 @@
-<% layout('layouts/boilerplate') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Independent Restaurant Review</title>
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+</head>
+<body>
+    <div class="container">
+        <div class="home__nav">
+            <h3 class="home__nav-heading">Independent Restaurant Review</h3>
+            <nav>
+                <a href="#" class="home__nav-link active" aria-current="page">Home</a>
+                <a href="/restaurants" class="home__nav-link">Campgrounds</a>
+                <% if(!currentUser) { %>
+                    <a href="/login" class="home__nav-link">Login</a>
+                    <a href="/register" class="home__nav-link">Register</a>
+                    <% } else { %>
+                        <a href="/logout" class="home__nav-link">Logout</a>
+                        <% } %>
+            </nav>
+        </div>
+    </div>
+    
+</body>
+</html>
