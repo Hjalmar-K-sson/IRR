@@ -732,8 +732,9 @@ h1 {
     border: 0px;
   }
 }
-h1 {
-  color: pink;
+.home__background {
+  height: 100vh;
+  background: magenta;
 }
 
 *, ::after, ::before {
