@@ -26,11 +26,9 @@ body
     background-position: center
 
 .container
+    height: 100vh
     max-width: 80vw
     margin: 0 auto
-    display: flex
-    flex-direction: column
-    justify-content: center
 
 .home__nav
     display: flex
@@ -49,8 +47,60 @@ body
         align-items: center
         flex-wrap: wrap
         a
-            padding: 0 .25rem 0
+            padding: 0 .3rem 0
             font-size: 1.3rem
             color: $main-grey
             text-decoration: none
             font-family: $regular-font
+            transition: all 0.3s ease-in-out
+            border-bottom: .25rem solid transparent
+            &:hover
+                color: $main-white
+                border-bottom-color: $main-white
+
+main
+    height: 50%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    h1
+        color: $alert-yellow
+        font-size: 3rem
+    p
+        color: $main-white
+        font-family: $regular-font
+        font-weight: $extra-light
+        font-size: 2rem
+    a
+        display: block
+        padding: 1rem
+        margin: 1rem
+        font-family: $regular-font
+        text-decoration: none
+        border: .2rem transparent solid
+        transition: all 0.3s ease-in-out
+        border-radius: .3rem
+        margin: 0 .5rem
+        background: $danger-salmon
+        color: $main-white
+        font-size: inherit
+        &:hover
+            color: $danger-salmon
+            background: transparent
+            border: .2rem $danger-salmon solid
+            cursor: pointer
+
+footer
+    width: 100%
+    position: fixed
+    bottom: 0
+    padding: 1rem
+    a
+        font-family: $regular-font
+        color: $main-white
+        text-decoration: none
+
+@media (max-width: 992px)
+    .home__nav
+        flex-direction: column
