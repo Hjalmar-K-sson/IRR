@@ -732,11 +732,6 @@ h1 {
     border: 0px;
   }
 }
-.home__background {
-  height: 100vh;
-  background: magenta;
-}
-
 *, ::after, ::before {
   box-sizing: border-box;
   margin: 0;
