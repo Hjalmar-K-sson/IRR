@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Independent Restaurant Review</title>
-    <link rel="stylesheet" href="/stylesheets/normalize.css">
-    <link rel="stylesheet" href="/stylesheets/home.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/stylesheets/normalize.css" />
+    <link rel="stylesheet" href="/stylesheets/home.css" />
+  </head>
+  <body>
     <div class="container">
         <div class="home__nav">
             <h3 class="home__nav-heading">Independent Restaurant Review</h3>
             <nav>
                 <a href="#" class="home__nav-link active" aria-current="page">Home</a>
-                <a href="/restaurants" class="home__nav-link">Campgrounds</a>
+                <a href="/restaurants" class="home__nav-link">Restaurants</a>
                 <% if(!currentUser) { %>
                     <a href="/login" class="home__nav-link">Login</a>
                     <a href="/register" class="home__nav-link">Register</a>
-                    <% } else { %>
-                        <a href="/logout" class="home__nav-link">Logout</a>
-                        <% } %>
+                <% } else { %>
+                <a href="/logout" class="home__nav-link">Logout</a>
+                <% } %>
             </nav>
-        </div>
+      </div>
+      <main>
+        <h1>Independent Restaurant Review</h1>
+        <p>Let us help You help Yourself by adding and reviewing Your favourite restaurants all over the world!</p>
+        <a class="home__main-btn" href="/restaurants">Explore Restaurants</a>
+      </main>
     </div>
-    
-</body>
+    <footer>
+        <a href="https://github.com/Hjalmar-K-sson" target="blank">&#169 Hjalmar-K-sson 2022</a>
+    </footer>
+  </body>
 </html>
