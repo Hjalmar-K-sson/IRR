@@ -12,6 +12,9 @@ body {
   height: 100vh;
   max-width: 80vw;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .home__nav {
@@ -21,7 +24,7 @@ body {
   flex-wrap: wrap;
 }
 .home__nav h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   float: left;
   color: white;
 }
@@ -35,7 +38,7 @@ body {
 }
 .home__nav nav a {
   padding: 0 0.3rem 0;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #a4a6a8;
   text-decoration: none;
   font-family: "Oswald", sans-serif;
@@ -48,7 +51,6 @@ body {
 }
 
 main {
-  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,13 +58,14 @@ main {
 }
 main h1 {
   color: #ffd500;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  margin-bottom: 0;
 }
 main p {
   color: white;
   font-family: "Oswald", sans-serif;
   font-weight: 200;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 main a {
   display: block;
@@ -89,7 +92,10 @@ footer {
   width: 100%;
   position: fixed;
   bottom: 0;
-  padding: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer a {
   font-family: "Oswald", sans-serif;
