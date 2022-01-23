@@ -12,12 +12,15 @@ body {
   height: 100vh;
   max-width: 80vw;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 .home__nav {
+  grid-area: 1/1/2/6;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -27,8 +30,10 @@ body {
   font-size: 1.5rem;
   float: left;
   color: white;
+  align-self: center;
 }
 .home__nav nav {
+  align-self: center;
   float: right;
   display: flex;
   flex-direction: row;
@@ -51,6 +56,7 @@ body {
 }
 
 main {
+  grid-area: 2/1/5/6;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -93,9 +99,7 @@ footer {
   position: fixed;
   bottom: 0;
   padding-bottom: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  grid-area: 5/1/6/6;
 }
 footer a {
   font-family: "Oswald", sans-serif;
