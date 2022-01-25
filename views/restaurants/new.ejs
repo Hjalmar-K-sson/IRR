@@ -28,8 +28,8 @@
                     placeholder=" " rows="7" required></textarea>
             </div>
             <div class="newEdit__form-field newEdit__form-field--file">
-                <input class="newEdit__form-field-input newEdit__form-field-input--file" type="file" name="restaurant[images]" id="images" placeholder=" " required multiple>
-                <label class="newEdit__form-field-label newEdit__form-field-label--file" for="images">Select images</label>
+                <input class="newEdit__form-field-input newEdit__form-field-input--file" type="file" name="restaurant[images]" id="images" onchange="getFilesNumber()" placeholder=" " required multiple>
+                <label class="newEdit__form-field-label newEdit__form-field-label--file" id="fileCount" for="images">Select images</label>
             </div>
             <div class="newEdit__form-field">
                 <label class="newEdit__form-field-label" for="city">City</label>
@@ -69,3 +69,4 @@
             </div>
         </form>
     </div>
+    <script src="/javascripts/utilities/imgPreview.js"></script>
