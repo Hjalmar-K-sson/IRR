@@ -47,7 +47,7 @@
             <p>Submitted by: <%= restaurant.author.username %>
             </p>
             <div class="show__card-btns">
-                <% if (currentUser) { %>
+                <% if (currentUser && restaurant.author.equals(currentUser.id)) { %>
                     <form action="/restaurants/<%= restaurant.id %>?_method=DELETE" method="POST">
                         <button class="show__card-btns--delete">Delete Restaurant</button>
                     </form>
