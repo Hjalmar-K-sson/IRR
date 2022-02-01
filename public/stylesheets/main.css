@@ -477,7 +477,7 @@ h1 {
   grid-row: span 1;
   place-self: center;
   background: rgba(83, 84, 92, 0.25);
-  box-shadow: 0 0 0.125rem 0.25rem rgba(48, 48, 48, 0.075);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
 }
 .card img {
