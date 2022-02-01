@@ -114,11 +114,15 @@
     </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.5.0/glide.js"
-    integrity="sha512-BDOdVHygzrUniS5DJvYBzAHyw5WQRdeVfHSaQmufCfV5s6OFnprcxMsEOAs26Bx6eTGpmlFo4owWiPpr3Voc0w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 <script>
-    new Glide('.glide').mount()
+    const config = {
+        type: 'carousel',
+        startAt: 0,
+        perView: 1,
+        animationDuration: 800
+    }
+    new Glide('.glide', config).mount()
 </script>
 <script>
     const mapboxToken = '<%- process.env.MAPBOX_TOKEN %>'
