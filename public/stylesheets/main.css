@@ -502,25 +502,9 @@ h1 {
 .glide__slides {
   max-height: 40rem;
 }
-.glide__slides .glide__slide {
-  height: 100%;
-  width: 100%;
+.glide__slides .glide__slide img {
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-.glide__arrows {
-  top: 50%;
-}
-.glide__arrows .glide__arrow--left {
-  left: -0.1rem;
-}
-.glide__arrows .glide__arrow--right {
-  right: -0.1rem;
-}
-.glide__arrows button {
-  color: #303030;
-  border-color: #303030;
 }
 
 .show__card {
