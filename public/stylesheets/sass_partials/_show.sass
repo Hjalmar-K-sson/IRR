@@ -11,6 +11,7 @@ $extra-light: 200
 $success-mint: rgb(0, 209, 182)
 $danger-salmon: rgb(225, 115, 92)
 $alert-yellow: rgb(255, 213, 0)
+$light-blue: rgb(116, 209, 234)
 $main-anthracite: rgb(83, 84, 92)
 $main-black: rgb(48, 48, 48)
 $main-grey: rgb(164, 166, 168)
@@ -22,11 +23,16 @@ $nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4
 
 .glide__slides
     max-height: 40rem
+    border-radius: .3rem
+
     .glide__slide
+        height: 100%
+        width: 100%
+        border-radius: .3rem
+
         img
-            // height: 100%
-            // width: 100%
             object-fit: contain
+            border-radius: .3rem
 
 // .glide__arrows
 //     top: 50%
@@ -41,10 +47,25 @@ $nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4
 .show__card
     display: flex
     flex-direction: column
-    justify-content: center
+    justify-content: space-between
     align-items: center
-    p
-        padding: .5rem
+    .show__info
+        margin-top: 1rem
+        h2
+            font-family: $logo-font
+            font-size: 2rem
+        span
+            display: inline-block
+            margin-top: 1rem
+            padding: .5rem
+            font-size: 1.2rem
+            i
+                color: $light-blue
+                font-size: 1.8rem
+        p
+            margin-top: 1rem
+            font-size: 1.5rem
+            font-weight: $extra-light
 
 .show__card-btns
     display: flex
@@ -64,6 +85,7 @@ $nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4
         background: $danger-salmon
         color: $main-white
         font-size: inherit
+        border: 1px solid
         &:hover
             color: $danger-salmon
             background: $main-white
@@ -90,6 +112,7 @@ $nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4
     width: 100%
     height: 300px
     margin-bottom: 2rem
+    border-radius: .3rem
 
 .show__rating
     margin-bottom: 2rem
@@ -111,6 +134,7 @@ $nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4
         background: $success-mint
         color: $main-white
         font-family: inherit
+        border: 1px solid
         border-color: transparent
         border-radius: .3rem
         width: 100%
@@ -136,10 +160,11 @@ $nav-gradient: linear-gradient(to right, #53545c, #66686e, #797c81, #8e9194, #a4
         color: $main-white
         font-family: inherit
         font-size: inherit
+        border: 1px solid
         border-color: transparent
         border-radius: .3rem
         &:hover
             color: $danger-salmon
-            background: $main-white
+            background: rgba(212, 212, 214, .2)
             border-color: $danger-salmon
             cursor: pointer
