@@ -1,59 +1,67 @@
 <% layout('layouts/boilerplate.ejs') %>
 <div class="grid-wrapper">
     <div class="row">
-        <div class="glide">
-            <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides">
-                    <% restaurant.images.forEach((img, i)=> { %>
-                    <li class="glide__slide"><img src="<%= img.url %> " alt="<%= img.filename %>"></li>
-                    <% }) %>
-                </ul>
-                <!-- <div class="glide__bullets" data-glide-el="controls[nav]">
-                    <% restaurant.images.forEach((img, i)=> { %>
-                        <button class="glide__bullet" data-glide-dir="=<%= i %>"></button>
-                        <% }) %>
-                </div> -->
-                <div class="glide__arrows" data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
-                            <path d="M0 12l10.975 11 2.848-2.828-6.176-6.176H24v-3.992H7.646l6.176-6.176L10.975 1 0 12z"></path>
-                        </svg>
-                    </button>
-                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
-                            <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            
-        </div>
+        
         <div class="show__card">
-            <p>
-                <%= restaurant.name %>
-            </p>
-            <p>
-                <%= `${restaurant.address.street} ${restaurant.address.houseNumber}, ${restaurant.address.city}` %>
-            </p>
-            <p>
-                Cuisine: <%= restaurant.cuisine %>
-            </p>
-            <p>
-                Price range: <%= restaurant.priceRange %>
-            </p>
-            <p>
-                <%= restaurant.description %>
-            </p>
-            <p>Submitted by: <%= restaurant.author.username %>
-            </p>
-            <div class="show__card-btns">
-                <% if (currentUser && restaurant.author.equals(currentUser.id)) { %>
-                    <form action="/restaurants/<%= restaurant.id %>?_method=DELETE" method="POST">
-                        <button class="show__card-btns--delete">Delete Restaurant</button>
-                    </form>
-                    <a class="show__card-btns--edit" href="/restaurants/<%= restaurant.id %>/edit">Edit restaurant</a>
-                <% } %>
-                <a class="show__card-btns--back" href="/restaurants">Back to all restaurants</a>
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <% restaurant.images.forEach((img, i)=> { %>
+                            <li class="glide__slide"><img src="<%= img.url %> " alt="<%= img.filename %>"></li>
+                            <% }) %>
+                    </ul>
+                    <!-- <div class="glide__bullets" data-glide-el="controls[nav]">
+                                <% restaurant.images.forEach((img, i)=> { %>
+                                    <button class="glide__bullet" data-glide-dir="=<%= i %>"></button>
+                                    <% }) %>
+                            </div> -->
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                                <path d="M0 12l10.975 11 2.848-2.828-6.176-6.176H24v-3.992H7.646l6.176-6.176L10.975 1 0 12z"></path>
+                            </svg>
+                        </button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                                <path
+                                    d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="show__info">
+                <h2>
+                    <%= restaurant.name %>
+                </h2>
+                <span>
+                    <i class="fas fa-map-pin"></i> 
+                    <%= `${restaurant.address.street} ${restaurant.address.houseNumber}, ${restaurant.address.city}, ${restaurant.address.country}` %>
+                </span>
+                <span>|</span>
+                <span>
+                    <i class="fas fa-utensils"></i> <%= restaurant.cuisine %>
+                </span>
+                <span>|</span>
+                <span>
+                    <i class="fas fa-hand-holding-usd"></i> <%= restaurant.priceRange %>
+                </span>
+                <p>
+                    <%= restaurant.description %>
+                </p>
+                <p>Submitted by: <%= restaurant.author.username %>
+                </p>
+                <div class="show__card-btns">
+                    <% if (currentUser && restaurant.author.equals(currentUser.id)) { %>
+                        <form action="/restaurants/<%= restaurant.id %>?_method=DELETE" method="POST">
+                            <button class="show__card-btns--delete">Delete Restaurant</button>
+                        </form>
+                        <a class="show__card-btns--edit" href="/restaurants/<%= restaurant.id %>/edit">Edit restaurant</a>
+                        <% } %>
+                            <a class="show__card-btns--back" href="/restaurants">Back to all restaurants</a>
+                </div>
             </div>
         </div>
     </div>
