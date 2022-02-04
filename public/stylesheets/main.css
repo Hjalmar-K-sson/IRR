@@ -533,6 +533,9 @@ h1 {
   padding: 0.5rem;
   font-size: 1.2rem;
 }
+.show__card .show__info span:last-of-type {
+  color: rgba(116, 209, 234, 0.5);
+}
 .show__card .show__info span i {
   color: #74d1ea;
   font-size: 1.8rem;
