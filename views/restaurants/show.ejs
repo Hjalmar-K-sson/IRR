@@ -51,8 +51,8 @@
                 <p>
                     <%= restaurant.description %>
                 </p>
-                <p>Submitted by: <%= restaurant.author.username %>
-                </p>
+                <span>Submitted by: <%= restaurant.author.username %>
+                </span>
                 <div class="show__card-btns">
                     <% if (currentUser && restaurant.author.equals(currentUser.id)) { %>
                         <form action="/restaurants/<%= restaurant.id %>?_method=DELETE" method="POST">
