@@ -500,8 +500,6 @@ h1 {
 }
 
 .glide {
-  width: 80%;
-  max-height: 80%;
   margin: 0 auto;
 }
 .glide .glide__slide {
@@ -509,7 +507,7 @@ h1 {
 }
 .glide .glide__slide img {
   border-radius: 0.3rem;
-  height: 100%;
+  width: 100%;
 }
 
 .show__card {
