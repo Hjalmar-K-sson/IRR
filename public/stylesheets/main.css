@@ -499,15 +499,13 @@ h1 {
        column-span: 1;
 }
 
-.glide {
-  margin: 0 auto;
-}
-.glide .glide__slide {
-  border-radius: 0.3rem;
-}
-.glide .glide__slide img {
-  border-radius: 0.3rem;
+.glide__slide-container img {
   width: 100%;
+  display: block;
+}
+
+.glide__slide-container img {
+  max-width: 20rem;
 }
 
 .show__card {
